@@ -33,10 +33,10 @@ const data =
 export default function Services(props) {
 
     return (
-        <div className=" bg-services-bg bg-cover bg-repeat-round space-y-3">
-            <div className="pt-24 pb-5 space-y-8">
-                <h1 className= "underline decoration-dashed decoration-8 decoration-sky-300 underline-offset-[20px] text-center text-4xl text-white font-Raleway">EMITAL PRODUCT DETAILS</h1>
-                <p className="text-center text-l text-white font-Raleway">EMITAL is bringing our signature products to your door step to present a gift to your home.</p>
+        <div className=" bg-services-bg lg:bg-cover bg-repeat-round space-y-3 px-3">
+            <div className="pt-24 pb-5 space-y-10">
+                <h1 className= "underline  decoration-8 decoration-sky-300 underline-offset-[20px] text-center text-2xl lg:text-4xl text-white font-Raleway">EMITAL PRODUCT DETAILS</h1>
+                <p className="mx-16 text-center text-l text-white font-Raleway">EMITAL is bringing our signature products to your door step to present a gift to your home.</p>
             </div>
         <div className="flex flex-wrap gap-4 mx-4 justify-center">
             {data.map(product => (

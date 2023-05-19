@@ -1,6 +1,7 @@
+import ScrollToTop from "./ScrollToTop";
 export default function MenuElement (props){
     return(
-    <p onClick={() => props.funx(props.s)} className="font-bold p-4 font-Poppins text-stone-400 cursor-pointer ">{props.name}
+    <p onClick={() => props.func(props.s)} className="font-bold text-xl text-[#444444] p-4 font-Open-sans cursor-pointer ">{props.name}
     
     </p>);
 }
