@@ -107,7 +107,7 @@ function Filter ()  {
           {click &&
       <div  id="popup" className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50" >
 
-           <div ref={domNode} className="absolute aspect-[1/1] w-auto h-5/6 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden border-4 border-solid border-green rounded-md group" >
+           <div ref={domNode} className="absolute h-1/2   aspect-square lg:w-1/2 lg:h-2/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden border-4 border-solid border-green rounded-md group" >
 
            <img
         className=" w-full h-full items-center justify-items-center object-fill group-hover:scale-110 transition-all duration-500 rounded-md"
