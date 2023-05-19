@@ -53,6 +53,17 @@ export default function Welcome() {
             <div ref={contact} className="items-center justify-items-center">
                 <Contact />
             </div>
+            <div class="py-5 px-4 justify-between mx-0 flex flex-row  bg-black">
+                <img src={Emitalogo} alt="" className="mx-0 w-[260px] h-[70px] items-start" />
+                <div className="flex items-center justify-between flex-row  bg-white">
+                    <MenuElement funx={scrollToSection} s={front} name="Home" />
+                    <MenuElement funx={scrollToSection} s={about} name="About" />
+                    <MenuElement funx={scrollToSection} s={services}name="Services" />
+                    <MenuElement funx={scrollToSection} s={gallery} name="Gallery" />
+                    <MenuElement funx={scrollToSection} s={contact} name="Contact" />
+                    <Button class="px-2 py-1 rounded-full mx-auto bg-blue-500" text="Get Started" />
+                </div>
+                </div>
         </>
 
 
