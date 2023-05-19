@@ -1,0 +1,23 @@
+name: Build Test & Deploy
+
+on:
+  push:
+    branches: pre-prod
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    environment: pre-prod
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Build Application
+        run: npm run build
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.2
+        with:
+          branch: gh-pages
+          folder: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
