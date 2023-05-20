@@ -11,7 +11,7 @@ function ModelViewer() {
 
   return (
 
-    <Canvas dpr={[1,2]} shadows camera={{fov: 45}} style={{"position": "absolute"}}>
+    <Canvas   dpr={[1,2]} shadows camera={{fov: 45}} style={{}}>
       <color attach="background" args={["#101010"]}>
       </color>
       <PresentationControls speed={1.5} global zoom={.5} polar={[-0.1, Math.PI/4]}>
