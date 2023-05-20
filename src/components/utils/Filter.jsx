@@ -28,9 +28,10 @@ function Filter ()  {
   const [active, setActive] = useState(false);
   const [click ,setClick] = useState(false);
   console.log(filterImages);
+  const default1 = images.filter((item) => item.category === "bifold");
 
   useEffect(() => {
-    setFilterImages(images);
+    setFilterImages(default1);
   }, []);
   let domNode=
     useClickOutside(()=>{
