@@ -10,7 +10,6 @@ import Services from "./sections/Services"
 import ScrollToTop from "./ScrollToTop";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
-import ModelViewer from "./GLB";
 export default function Welcome() {
 
     const front = useRef(null);
@@ -63,9 +62,6 @@ export default function Welcome() {
             </div>
             <div ref={services} className="items-center justify-items-center">
                 <Services />
-            </div>
-            <div  className="items-center justify-items-center">
-                <ModelViewer />
             </div>
             <div ref={gallery} className="items-center justify-items-center">
                 <Gallery />
