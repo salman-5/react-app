@@ -15,7 +15,7 @@ export default function Footer(){
     const link5="mailto:salmu234@gmail.com"
     return(
         <>
-          <div href={link1} class="py-5 px-4 justify-between place-items-center mx-0 flex lg:flex-row flex-col  bg-black">
+          <div  class="py-5 px-4 justify-between place-items-center mx-0 flex lg:flex-row flex-col  bg-black">
                         <p className="text-white">© Copyright EMITAL. All Rights Reserved</p>
                 <div className="flex items-center justify-between flex-row">
                     <FooterElement link={link1} icon={icon1}/>

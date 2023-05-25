@@ -60,11 +60,11 @@ export default function Welcome() {
             <div ref={about} className="items-center justify-items-center">
                 <About />
             </div>
-            <div ref={services} className="items-center justify-items-center">
-                <Services />
-            </div>
             <div ref={gallery} className="items-center justify-items-center">
                 <Gallery />
+            </div>
+            <div ref={services} className="items-center justify-items-center">
+                <Services />
             </div>
             <div ref={contact} className="items-center justify-items-center">
                 <Contact />

@@ -12,7 +12,7 @@ export default function Contact() {
         <div>
             <h2 class="underline underline-offset-8 decoration-amber-400 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-black">Contact Us</h2>
             <p class="px-8 lg:mb-16 font-light text-center text-gray-900 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
-            <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-3">
+            <div className=" grid lg:grid-cols-2 sm:grid-cols-1 gap-3">
                 <div className=" flex flex-col m-8 place-content-between gap-[11px]">
 
                     <div className=" justify-items-center items-center justify place-content-center">
@@ -22,10 +22,10 @@ export default function Contact() {
                 <h1 className='text-black font-medium  mx-auto font-Poppins'>
                 Our Address
                 </h1>
-            {/* </div> */}
+        
 
             <p className='mx-auto text-center text-black text-s justify font-Open-sans'>
-            EMITAl Aluminum Co LLC. PB No. 18149, Ajman, UAE
+            EMITAL Aluminum Co LLC. PB No. 18149, Ajman, UAE
             </p>
         </div>
                     </div>
