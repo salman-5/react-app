@@ -10,6 +10,8 @@ import Services from "./sections/Services"
 import ScrollToTop from "./ScrollToTop";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import Bifold from "./sections/Bifold";
+
 export default function Welcome() {
 
     const front = useRef(null);
@@ -56,6 +58,9 @@ export default function Welcome() {
             <ScrollToTop />
             <div ref={front} className="items-center justify-items-center ">
                 <Front />
+            </div>
+            <div ref={front} className="items-center justify-items-center ">
+                <Bifold />
             </div>
             <div ref={about} className="items-center justify-items-center">
                 <About />

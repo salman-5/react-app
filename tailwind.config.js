@@ -17,6 +17,10 @@ export default {
         'services-bg': "url('/src/assets/services-bg.png')",
       },
       backgroundOpacity: ['active'],
+      listStyleImage: {
+        store: 'url("/src/assets/bifold list.svg")'
+
+      }
     },
   },
   plugins: [
