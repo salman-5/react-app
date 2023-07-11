@@ -26,22 +26,22 @@ export default function About(props) {
     const getImageData = (schema_name) =>{
         import(`../../assets/schemas/S${schema_name}.jpg`).then(image=> setImageData(image))
     }
-    const getImageComponent= () =>{
-        <img
-        ref={imageElement}
-        src={imageData.default} 
-        alt="Schema Image" 
-        className={imageClass}
-        onLoad={() => setImageDimensions({...imageDimensions,['height']: imageElement.current.naturalHeight,['width']: imageElement.current.naturalWidth,})} 
-        />
-    }
+    // const getImageComponent= () =>{
+    //     <img
+    //     ref={imageElement}
+    //     src={imageData.default} 
+    //     alt="Schema Image" 
+    //     className={imageClass}
+    //     onLoad={() => setImageDimensions({...imageDimensions,['height']: imageElement.current.naturalHeight,['width']: imageElement.current.naturalWidth,})} 
+    //     />
+    // }
 
-    useEffect(()=>{
-        getImageComponent();
-    },[imageClass])
-    useEffect(()=>{
-        setImageClass(imageDimensions['width']>imageDimensions['height']?'max-w-lg':'max-w-sm')
-    },[imageDimensions])
+    // useEffect(()=>{
+    //     getImageComponent();
+    // },[imageClass])
+    // useEffect(()=>{
+    //     setImageClass(imageDimensions['width']>imageDimensions['height']?'max-w-lg':'max-w-sm')
+    // },[imageDimensions])
 
     return (
         <>
@@ -81,7 +81,13 @@ export default function About(props) {
                     <h1 class="mt-5 px-8 font-bold text-4xl flex font-Raleway text-slate-800">Demo</h1>
                     {/* <About_card icon={abouticon_1} title="EMITAL Bi-Fold Doors" content="EMITAL Bi-Fold Doors powered by CORTIZO has designed more than 50 exclusive systems of windows, facades, composite panel, solar protection systems and balustrade. This commitment to innovation allows us to offer high value added products, maximizing energy efficiency, thermal and acoustic insulation and resistance to atmospheric agents." />
                     <About_card icon={abouticon_2} title="SPECIALITY" content="Design, innovation and quality are a common denominator in our Bi-fold Doors. They are adjustable to any type of project: single-family and collective housing, health, industrial, offices..., any type of building!" /> */}
-
+                    <img
+                    ref={imageElement}
+                    src={imageData.default} 
+                    alt="Schema Image" 
+                    className={'max-w-md'}
+                    // onLoad={() => setImageDimensions({...imageDimensions,['height']: imageElement.current.naturalHeight,['width']: imageElement.current.naturalWidth,})} 
+                    /> 
                 </div> 
             </div>
         </>
