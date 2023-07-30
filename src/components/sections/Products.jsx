@@ -72,7 +72,7 @@ export default function Products() {
                             // // centerMode={true}
                             // // infinite={true}
                             // removeArrowOnDeviceType={["tablet", "mobile"]}
-                            deviceType={this.props.deviceType}
+                            // deviceType={this.props.responsive}
                             dotListClass="custom-dot-list-style"
                             itemClass="carousel-item-padding-40-px "
                         >
