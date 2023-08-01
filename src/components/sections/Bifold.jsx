@@ -67,23 +67,25 @@ export default function About(props) {
 
                 </div>
 
-                <div class="flex flex-col h-full items-content-center">
+                <div class="flex flex-col h-full items-center justify-center">
                     <img src={bifold_img} alt="" />
                     {/* <About_card icon={abouticon_1} title="EMITAL Bi-Fold Doors" content="EMITAL Bi-Fold Doors powered by CORTIZO has designed more than 50 exclusive systems of windows, facades, composite panel, solar protection systems and balustrade. This commitment to innovation allows us to offer high value added products, maximizing energy efficiency, thermal and acoustic insulation and resistance to atmospheric agents." />
                     <About_card icon={abouticon_2} title="SPECIALITY" content="Design, innovation and quality are a common denominator in our Bi-fold Doors. They are adjustable to any type of project: single-family and collective housing, health, industrial, offices..., any type of building!" /> */}
 
                 </div>
+            </div>
+            <div class="grid lg:grid-cols-2 grid-cols-1">
 
-                <div className="relative col-span-2">
+                <Door />
+                <div className="relative co">
                     <h1 class="mt-5 px-8 font-bold text-4xl flex font-Raleway text-slate-800">Configure Your Product</h1>
                     <QuoteForm className="absolute left-0" getimage={getImageData} />
                     {/* <img src={imageData.default} className='absolute right-0'/> */}
                 </div>
 
-                <Door />
                 {/* <div class="flex flex-col h-full items-content-center m-5 mt-10">
                 
-                    <h1 class="mt-5 px-8 font-bold text-4xl flex font-Raleway text-slate-800">Demo</h1>
+                <h1 class="mt-5 px-8 font-bold text-4xl flex font-Raleway text-slate-800">Demo</h1>
                     {/* <About_card icon={abouticon_1} title="EMITAL Bi-Fold Doors" content="EMITAL Bi-Fold Doors powered by CORTIZO has designed more than 50 exclusive systems of windows, facades, composite panel, solar protection systems and balustrade. This commitment to innovation allows us to offer high value added products, maximizing energy efficiency, thermal and acoustic insulation and resistance to atmospheric agents." />
                     <About_card icon={abouticon_2} title="SPECIALITY" content="Design, innovation and quality are a common denominator in our Bi-fold Doors. They are adjustable to any type of project: single-family and collective housing, health, industrial, offices..., any type of building!" /> *
                     <img

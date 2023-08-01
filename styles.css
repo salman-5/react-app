@@ -24,7 +24,7 @@
 }
 .img_box{
 	/* flex:0 0 20%; */
-	background:url('./src/assets/services-bg.png');
+	/* background:url('./src/assets/services-bg.png'); */
 	background-size: 500%;
 	transition: all 1s ease-in-out;
 } 
