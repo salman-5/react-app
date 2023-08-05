@@ -63,6 +63,8 @@ export default function Welcome() {
                 <Front />
             </div>
             <div ref={product} className="items-center justify-items-center ">
+            <h1 className="  mt-10 underline underline-offset-8 decoration-amber-400 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-black">Our Products</h1>
+
                 <Products />
             </div>
             <div ref={front} className="items-center justify-items-center ">

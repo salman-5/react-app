@@ -3,20 +3,7 @@ import bifold_img from '../../assets/bifold section.jpg';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import '../sections/category.css'
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from 'react-responsive-carousel';
-// import Slider from "react-slick";
 
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
-// const settings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1
-//   };
 const responsive = {
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
@@ -24,23 +11,39 @@ const responsive = {
         slidesToSlide: 1 // optional, default to 1.
     },
     tablet: {
-        breakpoint: { max: 1024, min: 400 },
+        breakpoint: { max: 1024, min: 600 },
         items: 2,
         slidesToSlide: 1 // optional, default to 1.
     },
     mobile: {
-        breakpoint: { max: 400, min: 0 },
+        breakpoint: { max: 600, min: 0 },
         items: 1,
         slidesToSlide: 1 // optional, default to 1.
     }
 };
 export default function Products() {
-
+    const cards = [
+        {
+          title: 'Bifold',
+          descriptions: {
+            tech: 'Description for Card 2, Filter 1',
+            desc: '» Up to 14 sashes: inward and outward opening \nPossibility of either even or odd number of sashes \nOption to embed the lower frame in the floor',
+          },
+        },
+        {
+          title: 'Bifold Plus',
+          descriptions: {
+            tech: 'Description for Card 2, Filter 1',
+            desc: 'Description for Card 2, Filter 2',
+          },
+        },
+        // Add more cards as needed...
+      ];
     return (
         <>
-            <div className=' '>
+            <div className=' bg-slate-400'>
 
-                <h1 className=" mt-10 underline underline-offset-8 decoration-amber-400 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-black">Our Products</h1>
+                {/* <h1 className=" mt-10 underline underline-offset-8 decoration-amber-400 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-black">Our Products</h1> */}
                 <div class=" bg-slate-400 grid grid-flow-col spacing-x-4 gap-4 ">
                 {/* <div class=" bg-slate-400 flex spacing-x-4 gap-4 "> */}
                     {/* <div  class="m-4 flex items-center ">
@@ -67,7 +70,7 @@ export default function Products() {
                             transitionDuration={500}
                             containerClass="carousel-container gap-4 p-2"
                             sliderClass='gap-2'
-                            partialVisbile={true}
+                            // partialVisbile={true}
                             // focusOnSelect={true}
                             // centerMode={true}
                             // // infinite={true}
@@ -77,9 +80,11 @@ export default function Products() {
                             itemClass="carousel-item-padding-4-px "
                         >
                              
-                            <PCard title="Bifold" text="Description" />
-                            <PCard title="Bifold Plus" text="Separate environments and unify spaces with this bi-fold door system with an 80 mm deep frame. This evolution of the Bi-fold series offers an excellent thermal and acoustic performance, thanks to its 45 mm thermal bridge breakage and a glazing capacity up to 48 mm. Besides, it presents a slim central section of 110 mm which allows the maximisation of the glazed surface, filling the interior spaces with natural light." />
-                            <PCard title="Bifold Thermal" text="Description" />
+                             {cards.map((card, index) => (
+       
+       < PCard title={card.title} descriptions={card.descriptions} />
+   ))}
+  
 
                         </Carousel>
                     </div>

@@ -49,20 +49,22 @@ export default function QuoteForm(props) {
         }
     }
     const changeHandler = (e) => {
+        console.log(formState);
         setFormState({ ...formState, [e.target.name]: e.target.value })
     }
 
-    useEffect(()=>{
-        // if (schemaList){
-            setFormState({ ...formState, ['schema']: schemaList[0] })
-        // }
-    },[schemaList])
+    // useEffect(()=>{
+    //     // if (schemaList){
+    //         setFormState({ ...formState, ['schema']: schemaList[0] })
+    //     // }
+    // },[schemaList])
 
-    // To get a new image every time user chooses different schema
-    useEffect(()=>{
-        props.getimage(formState['schema']);
-        // getSchemasList();
-    },[formState,schemaList])
+    // // To get a new image every time user chooses different schema
+    // useEffect(()=>{
+    //     props.getimage(formState['schema']);
+
+    //     // getSchemasList();
+    // },[formState,schemaList])
 
 
     return (
@@ -84,8 +86,9 @@ export default function QuoteForm(props) {
                                                 type="radio"
                                                 name="iproduct"
                                                 id="inlineRadio1"
-                                                value="bifold"
-                                                onChange={changeHandler}
+                                                value="in"
+                                                onChange={(e)=>{
+                                                    changeHandler(e); props.getOpening(e.target.value);}}
                                                 />
                                             <label
                                                 class="block mb-2 text-sm font-light text-gray-900 dark:text-gray-300"
@@ -99,8 +102,9 @@ export default function QuoteForm(props) {
                                                 type="radio"
                                                 name="iproduct"
                                                 id="inlineRadio2"
-                                                value="other" 
-                                                onChange={changeHandler}
+                                                value="out" 
+                                                onChange={(e)=>{
+                                                    changeHandler(e); props.getOpening(e.target.value);}}
                                                 />
                                             <label
                                                 class="block mb-2 text-sm font-light text-gray-900 dark:text-gray-300"
@@ -121,7 +125,8 @@ export default function QuoteForm(props) {
                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">No of Doors </label>
                             <input onChange={(e)=>{
                                 getSchemasList(schema[e.target.value]);
-                                console.log(schema[e.target.value])
+                                console.log(schema[e.target.value]);
+                                props.getimage(schema[e.target.value][0]);
                                 changeHandler(e);
                             }} 
                                 type="number" min={1} max={14} id="ndoor" name="ndoor" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Enter a number between 1-14" required 

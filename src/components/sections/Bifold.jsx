@@ -2,30 +2,32 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import bifoldicon from '../../assets/bifold list.svg';
 import bifold_img from '../../assets/bifold section.jpg';
-// import About_card from '../utils/About-card';
-// import abouticon_1 from '../../assets/about-1.svg'
-// import abouticon_2 from '../../assets/about-2.svg'
-// import Button from '../utils/Button';
+
 import Form from '../utils/Form';
 import Door from '../Door';
 import QuoteForm from './QuoteConfigForm';
+
 export default function About(props) {
-    // useEffect(() => {
-    //     const script = document.createElement('script');
-    //     script.src = "https://requirejs.org/docs/release/2.3.6/minified/require.js";
-    //     script.async = true;
-    //     document.body.appendChild(script);
-    //   return () => {
-    //       document.body.removeChild(script);
-    //     }
-    //   }, []);
+
     const [imageData, setImageData] = useState('')
-    const imageElement = React.useRef(null)
-    const [imageComponent, setImageComponent] = useState([])
-    const [imageDimensions, setImageDimensions] = useState({ 'height': 0, 'width': 0 })
-    const [imageClass, setImageClass] = useState('')
+    const [leftpanel, setleftPanel] = useState('2')
+    const [rightpanel, setrightPanel] = useState('2')
+    const [in_bool, setIn] = useState(true)
     const getImageData = (schema_name) => {
+        console.log(schema_name%10);
+        console.log((schema_name/10)%10);
+        setleftPanel(schema_name%10)
+        setrightPanel((schema_name/10)%10)
         import(`../../assets/schemas/S${schema_name}.jpg`).then(image => setImageData(image))
+    }
+    const getOpening= (e)=>{
+        console.log(e);
+        if(e==="in")
+        setIn(true)
+        else
+        setIn(false)
+        console.log(in_bool);
+
     }
     // const getImageComponent= () =>{
     //     <img
@@ -74,12 +76,12 @@ export default function About(props) {
 
                 </div>
             </div>
-            <div class="grid lg:grid-cols-2 grid-cols-1">
+            <div class="grid lg:grid-cols-2 grid-cols-1 bg-white items-center">
 
-                <Door />
+                <Door left={leftpanel} right={rightpanel} in_bool={in_bool} />
                 <div className="relative co">
                     <h1 class="mt-5 px-8 font-bold text-4xl flex font-Raleway text-slate-800">Configure Your Product</h1>
-                    <QuoteForm className="absolute left-0" getimage={getImageData} />
+                    <QuoteForm  className="absolute left-0" getimage={getImageData} getOpening={getOpening} />
                     {/* <img src={imageData.default} className='absolute right-0'/> */}
                 </div>
 
