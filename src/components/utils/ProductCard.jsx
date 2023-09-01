@@ -10,7 +10,7 @@ export default function PCard(props) {
     } else setActive("desc");
   }
   return (
-    <div class="bg-[#444444] h-full p-5 rounded-xl flex flex-col ">
+    <div class="bg-[#444444] h-full p-5 rounded-xl flex flex-col">
       <div class="h-1/2">
         <img src={bifold_img} class="w-full h-full rounded-t-xl " alt="" />
       </div>
