@@ -21,8 +21,7 @@ const Filter = () => {
     }
   };
 
-  const fullScreen = (e) =>{
-
+  const fullScreen = (e) => {
     console.log(e);
   };
 
