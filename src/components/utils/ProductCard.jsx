@@ -1,8 +1,7 @@
-import bifold_img from '../../assets/bifold section.jpg';
+import bifold_img from "../../assets/bifold section.jpg";
 import React, { useState, useRef } from "react";
 
 export default function PCard(props) {
-
   const [active, setActive] = useState("desc");
   function handleClick(t) {
     console.log(t.target.outerText);
@@ -22,6 +21,7 @@ export default function PCard(props) {
         <div className="line-clamp-3 text-justify text-white text-s justify font-Open-sans">
           {props.descriptions[active]}
         </div>
-        </div>
-    );
+      </div>
+    </div>
+  );
 }
