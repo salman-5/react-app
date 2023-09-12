@@ -55,6 +55,31 @@ export const images = [
     category: "bifold",
   },
   {
+    id: 11,
+    img: bifold11,
+    category: "bifold",
+  },
+  {
+    id: 12,
+    img: bifold12,
+    category: "bifold",
+  },
+  {
+    id: 13,
+    img: bifold13,
+    category: "bifold",
+  },
+  {
+    id: 14,
+    img: bifold14,
+    category: "bifold",
+  },
+  {
+    id: 15,
+    img: bifold15,
+    category: "bifold",
+  },
+  {
     id: 5,
     img: bifold5,
     category: "bifold",
@@ -82,31 +107,6 @@ export const images = [
   {
     id: 10,
     img: bifold10,
-    category: "bifold",
-  },
-  {
-    id: 11,
-    img: bifold11,
-    category: "bifold",
-  },
-  {
-    id: 12,
-    img: bifold12,
-    category: "bifold",
-  },
-  {
-    id: 13,
-    img: bifold13,
-    category: "bifold",
-  },
-  {
-    id: 14,
-    img: bifold14,
-    category: "bifold",
-  },
-  {
-    id: 15,
-    img: bifold15,
     category: "bifold",
   },
   {

@@ -28,9 +28,10 @@ function Filter ()  {
   const [active, setActive] = useState(false);
   const [click ,setClick] = useState(false);
   console.log(filterImages);
+  const default1 = images.filter((item) => item.category === "bifold");
 
   useEffect(() => {
-    setFilterImages(images);
+    setFilterImages(default1);
   }, []);
   let domNode=
     useClickOutside(()=>{
@@ -61,7 +62,7 @@ function Filter ()  {
   return (
     <div className="wrapper p-8">
       {/* heading */}
-      <h1 className=" uppercase font-Raleway text-5xl text-center font-bold text-primary mb-10">
+      <h1 className="mt-10 underline underline-offset-8 decoration-cyan-800 uppercase font-Raleway text-5xl text-[#444444] text-center font-bold text-primary mb-10">
         Gallery
       </h1>
 
@@ -76,7 +77,7 @@ function Filter ()  {
               value={value}
               className={`${
                 active === value ? "bg-indigo-500 text-white" : "text-black "
-              } py-3 px-5 inline-block rounded-full border-[3px] transition-all duration-300 hover:bg-gray-400 border-solid border-fourth text-sm  md:text-lg font-semibold `}
+              } py-3 px-5 inline-block rounded-full border-[3px] transition-all duration-300 hover:bg-gray-400 border-cyan-400 border-solid border-fourth text-sm  md:text-lg font-semibold `}
             >
               {name}
             </button>
@@ -91,7 +92,7 @@ function Filter ()  {
             const { img } = item;
             return (
               <div
-                className="overflow-hidden border-4 border-solid border-green rounded-md group"
+                className="overflow-hidden border-2 border-solid  rounded-md group"
                 key={id}
               >
                 <img
@@ -107,7 +108,7 @@ function Filter ()  {
           {click &&
       <div  id="popup" className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50" >
 
-           <div ref={domNode} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 overflow-hidden border-4 border-solid border-green rounded-md group" >
+           <div ref={domNode} className="absolute h-1/2   aspect-square lg:w-1/2 lg:h-2/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden border-4 border-solid border-green rounded-md group" >
 
            <img
         className=" w-full h-full items-center justify-items-center object-fill group-hover:scale-110 transition-all duration-500 rounded-md"
