@@ -22,6 +22,23 @@ export default function PCard(props) {
           {props.descriptions[active]}
         </div>
       </div>
+
+      <div className="">
+        <ul className="p-2 flex gap-2 justify-evenly">
+          <li
+            className="inline-block rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200"
+            onClick={handleClick}
+          >
+            Description
+          </li>
+          <li
+            className="inline-block rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200"
+            onClick={handleClick}
+          >
+            Technical Data
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
