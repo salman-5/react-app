@@ -30,10 +30,7 @@ export default function Form(params) {
   //         ))}
   //     </select>
   // );
-  const [options, setOptions] = useState([
-    { name: "Option 1️⃣", id: 1 },
-    { name: "Option 2️⃣", id: 2 },
-  ]);
+
   const [click, setClick] = useState();
   const [country, setCountry] = useState();
   const [value, setValue] = useState();
@@ -101,10 +98,6 @@ export default function Form(params) {
     }
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
-
-  useEffect(() => {
-    console.log("Form state data = ", formState);
-  }, [formState]);
 
   return (
     <>
