@@ -43,7 +43,7 @@ jobs:
           aws-region: us-east-1  # Replace with your AWS region
       - name: Update ECS service
         run: |
-          aws ecs update-service --cluster emital-devops --service emital0tesg --force-new-deployment
+          aws ecs update-service --cluster emital-devops --service ww --force-new-deployment
       #   with:
       #     role-to-assume: ${{ secrets.READ_ROLE }}
       #     aws-region: us-east-1
