@@ -246,11 +246,18 @@ export default function QuoteForm(props) {
               </p>
             </div>
           )}
-          <input
+          <button
             type="submit"
             value="Send message"
-            class="mx-auto rounded-full bg-blue-500 justify-center py-3 px-5 text-sm font-medium text-center text-white  bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-          />
+            disabled={
+              !validations.heightIsValid || !validations.widthIsValid
+                ? true
+                : false
+            }
+            className={`mx-auto rounded-full bg-blue-500 justify-center py-3 px-5 text-sm font-medium text-center text-white  bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 disabled:cursor-not-allowed`}
+          >
+            Submit
+          </button>
         </div>
       </form>
     </>
