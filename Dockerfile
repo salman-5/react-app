@@ -3,9 +3,9 @@ WORKDIR '/app'
 COPY package.json .
 RUN npm install
 COPY . .
-RUN npm run build --base=\
+RUN npm run build 
 
 EXPOSE 5173
 
 FROM nginx
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/react-app/html
