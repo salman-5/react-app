@@ -1,23 +1,54 @@
-name: Build Test & Deploy
+name: Pre-prod pipeline
 
 on:
   push:
     branches: pre-prod
 jobs:
-  build-test:
+  build-and-push-docker-image:
     runs-on: ubuntu-latest
     environment: pre-prod
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: npm install
-      - name: Build Application
-        run: npm run build
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
         with:
-          branch: gh-pages
-          folder: dist
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build Docker Image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: |
+            salras/emital-dev:latest
+            salras/emital-dev:${{ github.sha }}
+      - name: Push Docker Image to Docker Hub
+        run: docker push salras/emital-dev
+  deploy-to-pre-prod:
+    needs: build-and-push-docker-image
+    permissions:
+      id-token: write 
+      contents: read
+    runs-on: ubuntu-latest
+    environment: pre-prod
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.ECS_ROLE }}
+          aws-region: us-east-1  # Replace with your AWS region
+      - name: Update ECS service
+        run: |
+          aws ecs update-service --cluster emital-devops --service ww --force-new-deployment
+      #   with:
+      #     role-to-assume: ${{ secrets.READ_ROLE }}
+      #     aws-region: us-east-1
+      # - name: Connect to EC2 instance
+      #   run: |
+      #       aws ssm send-command --document-name "AWS-RunShellScript" --document-version "1" --targets '[{"Key":"InstanceIds","Values":["i-0e1e938e34e31d717"]}]' --parameters '{"workingDirectory":["/home/ubuntu"],"executionTimeout":["3600"],"commands":["#! /bin/bash","docker stop react-app","docker rm react-app","","docker rmi salras/my-image:latest","docker pull salras/my-image:latest","","docker run -t -d -p 80:80 --name react-app salras/my-image:latest"]}' --timeout-seconds 600 --max-concurrency "50" --max-errors "0" --region us-east-1
+
+
