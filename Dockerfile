@@ -8,4 +8,4 @@ RUN npm run build
 EXPOSE 5173
 
 FROM nginx
-COPY --from=builder /app/dist /usr/share/nginx/react-app/html
+COPY --from=builder /app/dist /usr/share/nginx/html/react-app/
