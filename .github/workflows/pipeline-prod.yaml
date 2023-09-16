@@ -1,35 +1,62 @@
-name: Pipeline Production
-on:
-  workflow_dispatch:
-    inputs:
-      title:
-        description: 'PR Title'
-        required: true
-        default: 'Add new Feature'
-      message:
-        description: 'PR Message'
-        required: true
-        default: 'Describe the change'
+# <<<<<<< updating-the-form-fields
+# name: Pipeline Production
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       title:
+#         description: 'PR Title'
+#         required: true
+#         default: 'Add new Feature'
+#       message:
+#         description: 'PR Message'
+#         required: true
+#         default: 'Describe the change'
 
+
+# jobs:
+#   create_pr:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Create Pull Request
+#         uses: actions/checkout@v2
+#       # Use the GitHub CLI to create a pull request
+#       - name: Create PR
+#         run: |
+#           gh pr create --title "${{ github.event.inputs.title }}" --body "${{ github.event.inputs.message }}" --base master --head pre-prod
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+#   deploy-to-production:
+#     needs: create_pr
+#     permissions:
+#       id-token: write 
+#       contents: read
+# =======
+# Simple workflow for deploying static content to GitHub Pages
+name: Production pipeline
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ['master']
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
 
 jobs:
-  create_pr:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Create Pull Request
-        uses: actions/checkout@v2
-      # Use the GitHub CLI to create a pull request
-      - name: Create PR
-        run: |
-          gh pr create --title "${{ github.event.inputs.title }}" --body "${{ github.event.inputs.message }}" --base master --head pre-prod
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-  deploy-to-production:
-    needs: create_pr
-    permissions:
-      id-token: write 
-      contents: read
+  # Single deploy job since we're just deploying
+  deploy:
     environment:
       name: prod
       url: ${{ steps.deployment.outputs.page_url }}
