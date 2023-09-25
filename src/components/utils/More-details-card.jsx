@@ -1,17 +1,14 @@
 // import bifold_img from "../../assets/bifold section.jpg";
 // import React, { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 
 export default function MoreCard(props) {
-  //   const [active, setActive] = useState("desc");
-  //   function handleClick(t) {
-  //     console.log(t.target.outerText);
-  //     if (t.target.outerText === "TECHNICAL DATA") {
-  //       setActive("tech");
-  //     } else setActive("desc");
-  const navigate = useNavigate();
-
-  //   }
+//   const [active, setActive] = useState("desc");
+//   function handleClick(t) {
+//     console.log(t.target.outerText);
+//     if (t.target.outerText === "TECHNICAL DATA") {
+//       setActive("tech");
+//     } else setActive("desc");
+//   }
   return (
     <div class="bg-[#444444] h-full p-5 rounded-xl flex flex-col">
       <div class="h-1/2">
@@ -27,15 +24,7 @@ export default function MoreCard(props) {
       </div>
 
       <div className="">
-        <button
-          onClick={() => {
-            const route = props.title.split(" ")[0].toLowerCase();
-            navigate(`/${route}`);
-          }}
-          class="hover:bg-orange-400 hover:text-white mx-auto px-2 py-1 text-center font-light text-white rounded-full border-orange-400 border-2 bg-transparent"
-        >
-          Learn more{" "}
-        </button>
+      <button class="hover:bg-orange-400 hover:text-white mx-auto px-2 py-1 text-center font-light text-white rounded-full border-orange-400 border-2 bg-transparent">Learn more </button>
 
         {/* <ul className="p-2 flex gap-2 justify-evenly">
           <li
