@@ -4,10 +4,12 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import '../sections/category.css'
 import MoreCard from '../utils/More-details-card';
+import MultiActionAreaCard from '../utils/test-card';
+
 const responsive = {
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 2,
+        items: 3,
         slidesToSlide: 1 // optional, default to 1.
     },
     tablet: {
@@ -84,20 +86,17 @@ export default function Products() {
        
        < PCard title={card.title} descriptions={card.descriptions} />
    ))} */}
-                <MoreCard image='./asset/hi-bifold-2.jpg' title="Bifold Door Sytems" descriptions="Experience Limitless Potential with Bifold Door Systems!
+                <MultiActionAreaCard image='./asset/hi-bifold-2.jpg' title="Bifold Door Sytems" descriptions="Experience Limitless Potential with Bifold Door Systems!
 
 Meet the BF 3700 TB for climate-controlled serenity. \n Discover the BF 80 PLUS, a design revolution with abundant natural light. \n Unleash the Monumental Bi-Fold's epic proportions and hurricane-proof might. These systems redefine spaces and elevate your expectations. Explore the future of architecture today!"/>
-                <MoreCard image='./asset/cor-vision-2.jpg' title="Sliding Door Systems" descriptions="Unleash Your Architectural Vision with CORTIZO's Cutting-Edge Sliding Doors!
+                <MultiActionAreaCard image='./asset/cor-vision-2.jpg' title="Sliding Door Systems" descriptions="Unleash Your Architectural Vision with CORTIZO's Cutting-Edge Sliding Doors!
 
 Revitalize your spaces with excitement! From the ultra-modern 4600 HI LIFT AND SLIDE to the expansive 4700 SLIDING system, and the minimalist elegance of COR VISION, to the grandeur of COR VISION PLUS - CORTIZO's innovations are redefining what's possible in design. Dive in now!"/>
-                <MoreCard image='./asset/mill-panel-2.jpg' title="Millenium Doors" descriptions="Experience the Future of Entrances with MILLENNIUM PLUS!
+                <MultiActionAreaCard image='./asset/mill-panel-2.jpg' title="Millenium Doors" descriptions="Experience the Future of Entrances with MILLENNIUM PLUS!
 
 MILLENNIUM PLUS 70 and 80 bring high insulation and sleek lines to your spaces. Add style with MILLENNIUM PLUS PANEL DOOR, featuring integrated panels and LED handles.
 
 Get ready for innovation with MILLENNIUM PLUS PIVOT DOOR, offering top performance and smart features like embedded LED handles and smart-home integration. Welcome to tomorrow's entrances, today!
-
-
-
 
 
 "/>
@@ -106,10 +105,10 @@ Get ready for innovation with MILLENNIUM PLUS PIVOT DOOR, offering top performan
                         </Carousel>
                     </div>
                 </div>
+            {/* <MultiActionAreaCard/> */}
 
 
             </div>
-
         </>
     )
 
