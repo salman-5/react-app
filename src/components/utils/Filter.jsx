@@ -76,8 +76,8 @@ function Filter ()  {
               key={id}
               value={value}
               className={`${
-                active === value ? "bg-indigo-500 text-white" : "text-black "
-              } py-3 px-5 inline-block rounded-full border-[3px] transition-all duration-300 hover:bg-gray-400 border-cyan-400 border-solid border-fourth text-sm  md:text-lg font-semibold `}
+                active === value ? "bg-indigo-500 text-white" : " bg-gray-200 text-black "
+              } py-3 px-5 inline-block rounded-full border-[3px] transition-all duration-300 hover:bg-gray-400 border-cyan-100 border-solid border-fourth text-sm  md:text-lg font-semibold `}
             >
               {name}
             </button>

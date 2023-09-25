@@ -9,7 +9,7 @@ export default function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='mx-0 p-0 bg-slate-400'>
+    <div className='mx-0 p-0'>
     
     <Welcome/>
 
