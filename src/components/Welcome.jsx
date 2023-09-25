@@ -62,8 +62,8 @@ export default function Welcome() {
             <div ref={front} className="items-center justify-items-center ">
                 <Front />
             </div>
-            <div ref={product} className="items-center justify-items-center ">
-            <h1 className="  mt-10 underline underline-offset-8 decoration-amber-400 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-black">Our Products</h1>
+            <div ref={product} className="items-center bg-gray-300 justify-items-center ">
+            <h1 className="  pt-10 underline underline-offset-8 decoration-amber-400 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-black">Our Products</h1>
 
                 <Products />
             </div>
@@ -73,13 +73,13 @@ export default function Welcome() {
             <div ref={about} className="items-center justify-items-center">
                 <About />
             </div>
-            <div ref={gallery} className="items-center justify-items-center">
+            <div ref={gallery} className="items-center bg-slate-400 justify-items-center">
                 <Gallery />
             </div>
-            <div ref={services} className="items-center justify-items-center">
+            <div ref={services} className="items-center  bg-slate-400 justify-items-center">
                 <Services />
             </div>
-            <div ref={contact} className="items-center justify-items-center">
+            <div ref={contact} className="items-center bg-slate-400 justify-items-center">
                 <Contact />
             </div>
             <Footer/>
