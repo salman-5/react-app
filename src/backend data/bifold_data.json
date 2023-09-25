@@ -1,0 +1,325 @@
+[
+    {
+        "Sliding": [
+            {
+                "product-name": "4600 HI LIFT AND SLIDE",
+                "description": "Ideal solution to close large spans, offering excellent thermal (Uw from 0.9 W/m2K) and acoustic (Rw up to 43 dB) performance along with a modern design with straight aesthetics in the sashes and glazing beads. It includes a hardware system that slightly elevates the sash when the handle is operated, facilitating its movement in the opening and closing motions, even in the case of sashes with large dimensions and weight. Possibility of a reduced interlock sightline of 50 mm. \nSLIM INTERLOCK Possibility of a reduced interlock section of 50 mm in monorail frame (sash + fixed light) and 2 rail frame, allowing a larger lazed surace. ",
+                "performance": [
+                    {
+                        "Transmittance": "Uw ≥ 0.9 (W/m2K) ",
+                        "Acoustic insulation": "Rw up to 43 db",
+                        "Air Pemeability": "Class 4",
+                        "Water Tightness": "Class 9A",
+                        "Wind Resistance": "Class C5",
+                        "Max Glazing Thickness": "55mm"
+                    }
+                ],
+                "possibilities": [
+                    {
+                        "Sliding": "Slidng of 2,3,4 &6 sashes",
+                        "Rail Choices": "Single rail with Fix ",
+                        "Others": "2 & 3 Rail slidin",
+                        "Corner Opening": "90° Opening without Mullion",
+                        "Sashes size": "L 3300mm H 3300mm",
+                        "Sash Weight": "400 Kg"
+                    }
+                ],
+                "images": [
+                    "./asset/4600-hi-1.JPG",
+                    "./asset/4600-hi-2.JPG",
+                    "./asset/4600-hi-3.JPG"
+                ]
+            },
+            {
+                "product-name": "4700 SLIDING",
+                "description": "Standard sliding system with straight aesthetics and a reduced interlock section of 47 mm, ideal for closing large spans without using a lift & slide solution, it combines great thermal and acoustic performance with large glazed surfaces of up to 88%. ",
+                "performance": [
+                    {
+                        "Transmittance": "Uw ≥ 1.1 (W/m2K)",
+                        "Acoustic insulation": "40db ",
+                        "Air Pemeability": "Class 3",
+                        "Water Tightness": "Class 7A",
+                        "Wind Resistance": "Class C5",
+                        "Max Glazing Thickness": "34mm",
+                        "PAS 24": "Apt PAS 24 "
+                    }
+                ],
+                "possibilities": [
+                    {
+                        "Sliding": "Slidng of 2,3,4 &6 sashes",
+                        "Rail Choices": "Single rail with Fix",
+                        "Others": "2 & 3 Rail sliding",
+                        "Corner Opening": "90° Opening without Mullion",
+                        "Sashes size": "L 2500mm H 3000mm",
+                        "Sash Weight": "280 Kg"
+                    }
+                ],
+                "images": [
+                    "./asset/4700-1.JPG",
+                    "./asset/4700-2.JPG",
+                    "./asset/4700-3.JPG"
+                ]
+            },
+            {
+                "product-name": "COR VISION",
+                "description": "Thermally broken minimalist sliding system that provides maximum luminosity with a minimal aluminium interlock profile. It has an elegant design only 20 mm sightline and offers the possibility of an inlaid closing system and of hiding the frame along the perimeter.  Possibility of locking system in the interlock, thus allowing the concealment of the sashes in the frame from a frontal view. Possibility of embedded locking system which facilitates the sashes crossing ",
+                "performance": [
+                    {
+                        "Transmittance": "Uw ≥ 1.3 (W/m2K)",
+                        "Acoustic insulation": "Rw UP to 41db ",
+                        "Air Pemeability": "Class 4",
+                        "Water Tightness": "Class 7A",
+                        "Wind Resistance": "Class C5",
+                        "Max Glazing Thickness": "34mm"
+                    }
+                ],
+                "possibilities": [
+                    {
+                        "Profile Thickness Door": "1.7 mm",
+                        "Sliding": "Slidng of 2,3,4 &6 sashes",
+                        "Rail Choices": "1, 2 & 3 Rails",
+                        "Corner Opening": "90° Opening without Mullion",
+                        "Sashes size": "L 2500mm H 3000mm",
+                        "Sash Weight": "320 Kg"
+                    }
+                ],
+                "images": [
+                    "./asset/cor-vision-1.JPG",
+                    "./asset/cor-vision-2.JPG"
+                ]
+            },
+            {
+                "product-name": "COR VISION PLUS",
+                "description": "The greatness of minimalism is reflected in this sliding system of large dimensions with sashes of up to 4 meters, interlock sightline of only 25 mm and frames embedded in the perimeter, allowing for a glazed surface of up to 94%. It has a maximum glazing capacity of 56 mm, offering excellent thermal and acoustic performances. Available with manual (up to 400 kg) or motorized (up to 700 kg) opening system. Additionally, accessibility is favoured by the possibility of hiding the rail and even integrating it fully into the floor ",
+                "performance": [
+                    {
+                        "Transmittance": "Uw ≥ 0.9 (W/m2K)",
+                        "Acoustic insulation": "Rw UP to 43db",
+                        "Air Pemeability": "Class 4",
+                        "Water Tightness": "Class 7A/9A",
+                        "Wind Resistance": "Class C3/C4",
+                        "Max Glazing Thickness": "56mm"
+                    }
+                ],
+                "possibilities": [
+                    {
+                        "Profile Thickness Door": "2.0 mm",
+                        "Sliding": "Possibility of 1,2,3 & 4 rails",
+                        "Corner Opening": "90° Opening without Mullion",
+                        "Sashes size": "L 4000mm H 4000mm",
+                        "Sash Weight": "400 Kg. manual 700 Kg. Motorized"
+                    }
+                ],
+                "images": [
+                    "./asset/cor-vision-plus-1.JPG",
+                    "./asset/cor-vision-plus-2.JPG"
+                ]
+            }
+        ]
+    },
+    {
+        "Bifold": [
+            {
+                "product-name": "BI FOLD DOOR SYSTEMS BF 3700 TB",
+                "description": "Bi-fold door system with 73 mm of frame depth and optimal thermal and acoustic performances, ideal for moderate climates ",
+                "performance": [
+                    {
+                        "Transmittance": "Uw ≥ 1.1 (W/m2K)",
+                        "Air Pemeability": "Class 4",
+                        "Water Tightness": "Class 9A",
+                        "Wind Resistance": "Class A3",
+                        "Max Glazing Thickness": "45mm",
+                        "PAS 24": "Apt PAS 24 "
+                    }
+                ],
+                "possibilities": [
+                    {
+                        "Profile Thickness Door": "1.8 mm",
+                        "Inward": "From 1 to 14 sashes",
+                        "Outward": "From 1 to 14 sashes",
+                        "Corner Opening": "90° Opening without Mullion",
+                        "Sashes size": "L 1200mm H 3000mm",
+                        "Sash Weight": "120 Kg"
+                    }
+                ],
+                "images": [
+                    "./asset/BF-3700-1.JPG",
+                    "./asset/BF-3700-2.JPG",
+                    "./asset/BF-3700-3.JPG"
+                ]
+            },
+            {
+                "product-name": "BI FOLD DOOR SYSTEMS  BF 80 PLUS ",
+                "description": "Separate environments and unify spaces with this bi-fold door system with an 80 mm deep frame. This evolution of the Bi-fold series offers an excellent thermal and acoustic performance, thanks to ts 45 mm thermal break and a glazing capacity up to 52 mm. Besides, it presents a slim central section of 110 mm which allows the maximisation of the glazed surface, filling the interior spaces with natural light ",
+                "performance": [
+                    {
+                        "Transmittance": "Uw ≥ 0.8 (W/m2K)",
+                        "Air Pemeability": "Class 4",
+                        "Water Tightness": "Class E750",
+                        "Wind Resistance": "Class C3",
+                        "Max Glazing Thickness": "48mm",
+                        "PAS 24": "Apt PAS 24 "
+                    }
+                ],
+                "possibilities": [
+                    {
+                        "Profile Thickness Door": "1.8 mm",
+                        "Inward": "From 1 to 14 sashes",
+                        "Outward": "From 1 to 14 sashes",
+                        "Corner Opening": "90° Opening without Mullion",
+                        "Sashes size": "L 1200mm H 3000mm",
+                        "Sash Weight": "120 Kg"
+                    }
+                ],
+                "images": [
+                    "./asset/BF-80-1.JPG",
+                    "./asset/BF-80-2.JPG",
+                    "./asset/BF-80-3.JPG"
+                ]
+            },
+            {
+                "product-name": "HI BI-FOLD DOOR SYSTEMS",
+                "description": "The new Bi-Fold Monumental door hits the market in order to complete the CORTIZO catalogue of XL systems. Thanks to its large dimensions, we will be able to manufacture sashes up to 5 m high and 1.2 m wide. In addition, the Monumental Bi-fold has proved its great performance against the most extreme meteorological phenomena, and has successfully the tests ASTM E1886-19 and ASTM E1996-17 against hurricanes and structural impacts.",
+                "performance": [
+                    {
+                        "Transmittance": "Uw ≥ 1.1 (W/m2K) ",
+                        "Air Pemeability": "Passed",
+                        "Water Tightness": "DP 60",
+                        "Wind Resistance": "DP 40",
+                        "Structural Overload": "DP 40",
+                        "Hurricane Impact": "Passed",
+                        "Max Glazing Thickness": "45mm"
+                    }
+                ],
+                "possibilities": [
+                    {
+                        "Profile Thickness Door": "1.8 mm",
+                        "Opening": "Possibility 1 to 14 sashes",
+                        "Sashes size": "L 1200mm H 5000mm",
+                        "Sash Weight": "220 Kg"
+                    }
+                ],
+                "images": [
+                    "./asset/hi-bifold-1.JPG",
+                    "./asset/hi-bifold-2.JPG"
+                ]
+            }
+        ]
+    },
+    {
+        "Millienium": [
+            {
+                "product-name": "MILLENNIUM PLUS 70",
+                "description": "Flush entrance pedestrian door system with 70 mm of frame depth that guarantees high thermal and acoustic insulation. ",
+                "performance": [
+                    {
+                        "Transmittance": "Uw ≥ 0.9 (W/m2K)",
+                        "Acoustic insulation": "38db",
+                        "Air Pemeability": "Class 4",
+                        "Water Tightness": "Class 6A ",
+                        "Wind Resistance": "Class C4 ",
+                        "Max Glazing Thickness": "54mm",
+                        "Features": "CONCEALED HINGES, ACCESSIBILITY, AUTOMATION "
+                    }
+                ],
+                "possibilities": [
+                    {
+                        "Profile Thickness Door": "2.0 mm",
+                        "Sashes size": " L1800mm H 3000mm / L1500mm H 2700mm. (Concealed Door Hinges) ",
+                        "Sash Weight": "220 Kg/ 120 Kg. (Concealed Hinges) ",
+                        "Inward Opening": "Side hung",
+                        "Outward Opening": "Side hung",
+                        "Automatic Opening": "Outward and inward Side hung",
+                        "Swing Opening": "Side hung"
+                    }
+                ],
+                "images": [
+                    "./asset/mill-70-1.JPG",
+                    "./asset/mill-70-2.JPG"
+                ]
+            },
+            {
+                "product-name": "MILLENNIUM PLUS 80",
+                "description": "Flush entrance door system with straight lines, 80 mm of frame depth, and a thermal break zone of 34 mm, particularly suitable for commercial and residential buildings ",
+                "performance": [
+                    {
+                        "Transmittance": " Uw ≥ 0.8 (W/m2K) ",
+                        "Acoustic insulation": "40db",
+                        "Air Pemeability": "Class 4",
+                        "Water Tightness": "Class 6A ",
+                        "Wind Resistance": "Class C4 ",
+                        "Max Glazing Thickness": "64mm",
+                        "Features": "CONCEALED HINGES, ACCESSIBILITY, AUTOMATION "
+                    }
+                ],
+                "possibilities": [
+                    {
+                        "Profile Thickness Door": "2.0 mm",
+                        "Sashes size": " L1800mm H 3000mm / L1500mm H 2700mm. (Concealed Door Hinges) ",
+                        "Sash Weight": "220 Kg/ 120 Kg. (Concealed Hinges) ",
+                        "Inward Opening": "Side hung",
+                        "Outward Opening": "Side hung",
+                        "Automatic Opening": "Outward and inward Side hung"
+                    }
+                ],
+                "images": [
+                    "./asset/mill-80-1.JPG",
+                    "./asset/mill-80-2.JPG"
+                ]
+            },
+            {
+                "product-name": "MILLENNIUM PLUS PANEL DOOR",
+                "description": "Compatible with the Millennium Plus 80 and Millennium Plus 70 series, it incorporates a panel integrated into the sash, which allows a wide range of aesthetic possibilities. In addition, it allows for the installation of an embedded handle with led illumination and a scanner  ",
+                "performance": [
+                    {
+                        "Transmittance": " Uw ≥ 0.79 (W/m2K) ",
+                        "Acoustic insulation": "40db",
+                        "Air Pemeability": "Class 4",
+                        "Water Tightness": "Class 5A ",
+                        "Wind Resistance": "Class C5 ",
+                        "Max Glazing Thickness": "64mm",
+                        "Features": "CONCEALED HINGES, ACCESSIBILITY, AUTOMATION "
+                    }
+                ],
+                "possibilities": [
+                    {
+                        "Profile Thickness Door": "2.0 mm",
+                        "Panel Size": "Max. 80 mm, Min. 33 mm (80) / Max. 70 mm, Min. 23 mm (70)",
+                        "Sashes size": " L1800mm H 3000mm / L1500mm H 2700mm. (Concealed Door Hinges) ",
+                        "Sash Weight": "220 Kg/ 120 Kg. (Concealed Hinges) ",
+                        "Inward Opening": "Side hung Automatic side hung ",
+                        "Outward Opening": "Side hung Automatic side hung"
+                    }
+                ],
+                "images": [
+                    "./asset/mill-panel-1.JPG",
+                    "./asset/mill-panel-2.JPG"
+                ]
+            },
+            {
+                "product-name": "MILLENNIUM PLUS PIVOT DOOR",
+                "description": "This new entrance door from Cortizo answers the latest design trends. The system is designed to allow large pivot openings suitable for contemporary architectural projects, and it offers excellent thermal and acoustic performance along with minimalistic sightlines. Besides, it can incorporate an embedded led pull handle and domotic opening through fingerprint, remote control or intelligent systems such as Google Home and Alexa.",
+                "performance": [
+                    {
+                        "Transmittance": " Uw ≥ 0.79 (W/m2K) ",
+                        "Air Pemeability": "Class 4",
+                        "Water Tightness": "Class 5A ",
+                        "Wind Resistance": "Class C5 ",
+                        "Features": "CONCEALED HINGES, ACCESSIBILITY, AUTOMATION "
+                    }
+                ],
+                "possibilities": [
+                    {
+                        "Profile Thickness Door": "2.0 mm",
+                        "Sashes size": " L 2100mm H 3000mm.",
+                        "Sash Weight": "250 Kg"
+                    }
+                ],
+                "images": [
+                    "./asset/mill-pivot-1.JPG",
+                    "./asset/mill-pivot-2.JPG"
+                ]
+            }
+        ]
+    }
+]
