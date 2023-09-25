@@ -47,18 +47,20 @@ export default function App() {
   );
 
   return (
-    <div className="mx-0 p-0">
+    <div className="mx-0 ">
       {/* <Navbar /> */}
       {/* <RouterProvider router={router}> */}
       <BrowserRouter basename="/react-app/">
         <Navbar />
+        <div className="p-5  overflow-hidden bg-transparent">
+          <Routes>
+            <Route path="/" Component={Welcome} />
+            <Route path="/bifold" Component={Bifold} />
+            <Route path="/sliding" Component={SlidingDoor} />
+            <Route path="/millenium" Component={MilleniumDoor} />
+          </Routes>
+        </div>
 
-        <Routes>
-          <Route path="/" Component={Welcome} />
-          <Route path="/bifold" Component={Bifold} />
-          <Route path="/sliding" Component={SlidingDoor} />
-          <Route path="/millenium" Component={MilleniumDoor} />
-        </Routes>
         <Footer />
       </BrowserRouter>
     </div>

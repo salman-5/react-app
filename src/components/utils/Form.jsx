@@ -196,7 +196,7 @@ export default function Form(params) {
                   </label>
                   <div
                     onChange={(e) => changeHandler(e, "project-status")}
-                    className="flex space-x-5"
+                    className="flex-col flex sm:flex-row space-y-3 sm:space-y-0 space-x-0 sm:space-x-3"
                   >
                     <div className="px-2 space-x-2">
                       <input
@@ -268,13 +268,12 @@ export default function Form(params) {
                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                   Interested Products
                 </label>
-                <div className="flex items-center w-full justify-between space-x-3 bg-red-500">
-                  <div className=" flex-1">
+                <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 space-x-0 items-center w-full justify-center lg:space-x-3">
+                  <div className=" flex-1 flex-col sm:flex-row w-full">
                     <Multiselect
                       displayValue="key"
                       placeholder="Doors"
                       showArrow
-                      className="w-[20px]"
                       style={{
                         chips: {
                           background: "rgb(59 130 246)",
@@ -315,7 +314,7 @@ export default function Form(params) {
                     />
                   </div>
 
-                  <div className=" flex-1">
+                  <div className=" flex-1 flex-col sm:flex-row w-full">
                     <Multiselect
                       displayValue="key"
                       placeholder="Windows"
@@ -360,8 +359,8 @@ export default function Form(params) {
                     />
                   </div>
                 </div>
-                <div className="flex items-center justify-between space-x-3">
-                  <div className="flex-1">
+                <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 space-x-0 items-center w-full justify-center lg:space-x-3">
+                  <div className="flex-1 w-full">
                     <Multiselect
                       displayValue="key"
                       placeholder="Facade"
@@ -409,7 +408,7 @@ export default function Form(params) {
                       ]}
                     />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 w-full">
                     <Multiselect
                       displayValue="key"
                       placeholder="Balcony / Railings"

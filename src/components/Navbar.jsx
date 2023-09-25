@@ -32,7 +32,7 @@ function Navbar() {
   };
   return (
     <div
-      class={`content-center gap-2 place-items-center  top-0 left-0 w-screen opacity-90 py-5 px-4 justify-between mx-0 flex ${
+      class={`content-center place-items-center  top-0 left-0  opacity-90 py-5 px-4 justify-between  mx-0 flex ${
         mobmenu ? "flex-col" : "flex-row"
       }  bg-white`}
     >
