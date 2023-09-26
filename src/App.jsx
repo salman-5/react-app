@@ -12,7 +12,7 @@ import {
   Route,
   BrowserRouter,
 } from "react-router-dom";
-import Bifold from "./pages/Bifold";
+import Bifold_page from "./pages/Bifold";
 import MilleniumDoor from "./pages/MilleniumDoor";
 import SlidingDoor from "./pages/SlidingDoor";
 import Footer from "./components/sections/Footer";
@@ -30,7 +30,7 @@ export default function App() {
       },
       {
         path: "/bifold",
-        element: <Bifold />,
+        element: <Bifold_page />,
       },
       {
         path: "/react-app/millenium",
@@ -55,7 +55,7 @@ export default function App() {
         <div className="p-5  overflow-hidden bg-transparent">
           <Routes>
             <Route path="/" Component={Welcome} />
-            <Route path="/bifold" Component={Bifold} />
+            <Route path="/bifold" Component={Bifold_page} />
             <Route path="/sliding" Component={SlidingDoor} />
             <Route path="/millenium" Component={MilleniumDoor} />
           </Routes>

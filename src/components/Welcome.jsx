@@ -35,9 +35,9 @@ export default function Welcome() {
 
         <Products />
       </div>
-      <div ref={front} className="items-center justify-items-center ">
+      {/* <div ref={front} className="items-center justify-items-center ">
         <Bifold />
-      </div>
+      </div> */}
       <div ref={about} id="about" className="items-center justify-items-center">
         <About />
       </div>
