@@ -30,7 +30,7 @@ export default function App() {
       },
       {
         path: "/bifold",
-        element: <Bifold_page />,
+        element: <Bifold />,
       },
       {
         path: "/react-app/millenium",
@@ -55,7 +55,7 @@ export default function App() {
         <div className="p-5  overflow-hidden bg-transparent">
           <Routes>
             <Route path="/" Component={Welcome} />
-            <Route path="/bifold" Component={Bifold_page} />
+            <Route path="/bifold" Component={Bifold} />
             <Route path="/sliding" Component={SlidingDoor} />
             <Route path="/millenium" Component={MilleniumDoor} />
           </Routes>
@@ -66,3 +66,4 @@ export default function App() {
     </div>
   );
 }
+
