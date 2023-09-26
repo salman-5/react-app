@@ -104,7 +104,7 @@ export default function Form(params) {
       <form
         onSubmit={sendMail}
         action="#"
-        class="flex flex-col m-8 p-8 space-y-5 bg-slate-500 rounded-[30px] justify-between place-items-center content-between place-content-between"
+        class="flex flex-col p-8 space-y-5 bg-slate-500 rounded-[30px] justify-between place-items-center content-between place-content-between w-full"
       >
         <div className="w-full gap-5 ">
           <div className="flex flex-col gap-3">
@@ -196,7 +196,7 @@ export default function Form(params) {
                   </label>
                   <div
                     onChange={(e) => changeHandler(e, "project-status")}
-                    className="flex space-x-5"
+                    className="flex-col flex sm:flex-row space-y-3 sm:space-y-0 space-x-0 sm:space-x-3"
                   >
                     <div className="px-2 space-x-2">
                       <input
@@ -268,8 +268,8 @@ export default function Form(params) {
                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                   Interested Products
                 </label>
-                <div className="flex items-center w-full justify-between space-x-3">
-                  <div className=" flex-1">
+                <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 space-x-0 items-center w-full justify-center lg:space-x-3">
+                  <div className=" flex-1 flex-col sm:flex-row w-full">
                     <Multiselect
                       displayValue="key"
                       placeholder="Doors"
@@ -314,7 +314,7 @@ export default function Form(params) {
                     />
                   </div>
 
-                  <div className=" flex-1">
+                  <div className=" flex-1 flex-col sm:flex-row w-full">
                     <Multiselect
                       displayValue="key"
                       placeholder="Windows"
@@ -359,8 +359,8 @@ export default function Form(params) {
                     />
                   </div>
                 </div>
-                <div className="flex items-center w-full justify-between space-x-3">
-                  <div className="flex-1">
+                <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 space-x-0 items-center w-full justify-center lg:space-x-3">
+                  <div className="flex-1 w-full">
                     <Multiselect
                       displayValue="key"
                       placeholder="Facade"
@@ -408,7 +408,7 @@ export default function Form(params) {
                       ]}
                     />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 w-full">
                     <Multiselect
                       displayValue="key"
                       placeholder="Balcony / Railings"
@@ -486,7 +486,7 @@ export default function Form(params) {
           <button
             type="submit"
             value="Send message"
-            class="mx-auto rounded-full bg-blue-500 text-white  justify-center py-3 px-5 text-sm font-medium text-center  bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            class="mx-auto rounded-full bg-blue-500 text-white  justify-center py-3 px-5 text-sm font-medium text-center  bg-primary-700 sm:w-full hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >
             Submit
           </button>
