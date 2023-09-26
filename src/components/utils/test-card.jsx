@@ -3,10 +3,14 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { useNavigate } from "react-router-dom";
+
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
 export default function MultiActionAreaCard(props) {
+  const navigate = useNavigate();
   return (
+
     <Card sx={{ maxWidth: 450, height: 550 }} class="h-[550px] justify-between items-start flex flex-col backdrop-blur-sm shadow-2xl overflow-hidden">
       <CardActionArea>
         <CardMedia
@@ -26,7 +30,10 @@ export default function MultiActionAreaCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary"   onClick={() => {
+            const route = props.title.split(" ")[0].toLowerCase();
+            navigate(`/${route}`);
+          }}>
           Learn More
         </Button>
       </CardActions>

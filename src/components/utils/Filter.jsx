@@ -27,7 +27,6 @@ function Filter ()  {
   const [filterImages, setFilterImages] = useState(null);
   const [active, setActive] = useState(false);
   const [click ,setClick] = useState(false);
-  console.log(filterImages);
   const default1 = images.filter((item) => item.category === "bifold");
 
   useEffect(() => {

@@ -6,7 +6,7 @@ export default function Front() {
         
         <>
         <div className="flex h-screen flex-col space-y-4 py-6 justify-center bg-left bg-hero-pattern bg-cover bg-stone-700 bg-blend-overlay "> 
-            <h1 className="mx-auto text-5xl text-white font-bold font-Raleway ">Cortizo Doors
+            <h1 className="mx-auto text-5xl text-white font-bold font-Raleway ">Emital Doors
                 </h1>
                <h6 className="mx-auto text-2xl text-white">Unlock the Beauty of Your Space
                 </h6>
