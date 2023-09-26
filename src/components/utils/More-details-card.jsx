@@ -26,7 +26,7 @@ export default function MoreCard(props) {
         </div>
       </div>
 
-      <div className="">
+      <div className="h-full">
         <button
           onClick={() => {
             const route = props.title.split(" ")[0].toLowerCase();

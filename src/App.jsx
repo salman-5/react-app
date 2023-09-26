@@ -16,6 +16,7 @@ import Bifold_page from "./pages/Bifold";
 import MilleniumDoor from "./pages/MilleniumDoor";
 import SlidingDoor from "./pages/SlidingDoor";
 import Footer from "./components/sections/Footer";
+import AutoScrollToTop from "./components/AutoScrollToTop";
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -51,6 +52,7 @@ export default function App() {
       {/* <Navbar /> */}
       {/* <RouterProvider router={router}> */}
       <BrowserRouter basename="/react-app/">
+        <AutoScrollToTop />
         <Navbar />
         <div className="p-5  overflow-hidden bg-transparent">
           <Routes>
