@@ -1,5 +1,5 @@
 import bifold_img from "../../assets/bifold section.jpg";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 export default function PCard(props) {
   const [active, setActive] = useState("desc");
@@ -10,9 +10,9 @@ export default function PCard(props) {
     } else setActive("desc");
   }
   return (
-    <div class="bg-[#444444] h-full p-5 rounded-xl flex flex-col">
-      <div class="h-1/2">
-        <img src={bifold_img} class="w-full h-full rounded-t-xl " alt="" />
+    <div className="bg-[#444444] h-full p-5 rounded-xl flex flex-col">
+      <div className="h-1/2">
+        <img src={bifold_img} className="w-full h-full rounded-t-xl " alt="" />
       </div>
       <h1 className="text-white text-xl font-bold uppercase font-Poppins pt-2">
         {props.title}
