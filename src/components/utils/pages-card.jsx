@@ -66,7 +66,7 @@ export default function PageCard(props) {
             {props.images.map((data, index) => (
               <img
                 key={index}
-                className=" w-full h-full  sm:w-2/4 rounded-sm content-stretch"
+                className=" object-cover  sm:w-2/4 rounded-sm place-content-stretch"
                 src={data}
                 alt=""
               />
@@ -81,13 +81,13 @@ export default function PageCard(props) {
           <div className="">
             <ul className="p-2 flex gap-2 justify-evenly">
               <li
-                className="inline-block rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200"
+                className="flex items-center justify-center rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200"
                 onClick={handleClick}
               >
                 POSSIBILITY
               </li>
               <li
-                className="inline-block rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200"
+                className="flex items-center justify-center rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200"
                 onClick={handleClick}
               >
                 PERFORMANCE Data
