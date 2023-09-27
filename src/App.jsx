@@ -17,43 +17,17 @@ import MilleniumDoor from "./pages/MilleniumDoor";
 import SlidingDoor from "./pages/SlidingDoor";
 import Footer from "./components/sections/Footer";
 import AutoScrollToTop from "./components/AutoScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
-  const [count, setCount] = useState(0);
-  const router = createBrowserRouter(
-    [
-      {
-        element: <Navbar />,
-      },
-      {
-        path: "/",
-        element: <Welcome />,
-      },
-      {
-        path: "/bifold",
-        element: <Bifold_page />,
-      },
-      {
-        path: "/react-app/millenium",
-        element: <MilleniumDoor />,
-      },
-      {
-        path: "/react-app/sliding",
-        element: <SlidingDoor />,
-      },
-    ],
-    {
-      basename: "/react-app",
-    }
-  );
-
   return (
-    <div className="mx-0 ">
+    <div className="mx-0">
       {/* <Navbar /> */}
       {/* <RouterProvider router={router}> */}
-      <BrowserRouter basename="/react-app/">
+      <BrowserRouter basename="/">
         <AutoScrollToTop />
         <Navbar />
+
         <div className="p-5  overflow-hidden bg-transparent">
           <Routes>
             <Route path="/" Component={Welcome} />
@@ -62,7 +36,7 @@ export default function App() {
             <Route path="/millenium" Component={MilleniumDoor} />
           </Routes>
         </div>
-
+        <ScrollToTop />
         <Footer />
       </BrowserRouter>
     </div>

@@ -13,9 +13,9 @@ export default function MoreCard(props) {
 
   //   }
   return (
-    <div class="bg-[#444444] h-full p-5 rounded-xl flex flex-col">
-      <div class="h-1/2">
-        <img src={props.image} class="w-full h-full rounded-t-xl " alt="" />
+    <div className="bg-[#444444] h-full p-5 rounded-xl flex flex-col">
+      <div className="h-1/2">
+        <img src={props.image} className="w-full h-full rounded-t-xl " alt="" />
       </div>
       <h1 className="text-white text-xl font-bold uppercase font-Poppins pt-2">
         {props.title}
@@ -32,7 +32,7 @@ export default function MoreCard(props) {
             const route = props.title.split(" ")[0].toLowerCase();
             navigate(`/${route}`);
           }}
-          class="hover:bg-orange-400 hover:text-white mx-auto px-2 py-1 text-center font-light text-white rounded-full border-orange-400 border-2 bg-transparent"
+          className="hover:bg-orange-400 hover:text-white mx-auto px-2 py-1 text-center font-light text-white rounded-full border-orange-400 border-2 bg-transparent"
         >
           Learn more{" "}
         </button>
