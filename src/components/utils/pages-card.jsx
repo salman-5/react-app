@@ -36,41 +36,43 @@ export default function PageCard(props) {
   };
 
   return (
-    <div className=" p-3 shadow-lg rounded-sm ">
-      <div className="flex flex-col sm:flex-row w-full justify-start  space-x-3 ">
-        <Carousel
-          swipeable={true}
-          draggable={true}
-          showDots={true}
-          responsive={responsive}
-          // // ssr={true} // means to render carousel on server-side.
-          // // infinite={true}
-          // // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-          // autoPlaySpeed={1000}
-          // keyBoardControl={true}
-          // renderButtonGroupOutside={true}
-          // customTransition="all .5"
-          transitionDuration={500}
-          containerClass="carousel-container"
-          sliderClass=""
-          partialVisbile={true}
-          // focusOnSelect={true}
-          // centerMode={true}
-          // // infinite={true}
-          // removeArrowOnDeviceType={["tablet", "mobile"]}
-          // deviceType={this.props.responsive}
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-4-px "
-        >
-          {props.images.map((data, index) => (
-            <img
-              key={index}
-              className="w-full  sm:w-2/4 rounded-sm "
-              src={data}
-              alt=""
-            />
-          ))}
-        </Carousel>
+    <div className=" p-3 shadow-lg rounded-sm h-full ">
+      <div className="flex flex-col sm:flex-row w-full justify-start h-full  space-x-3 ">
+        <div className=" w-full sm:w-1/3 min-h-full ">
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            showDots={true}
+            responsive={responsive}
+            // // ssr={true} // means to render carousel on server-side.
+            // // infinite={true}
+            // // autoPlay={this.props.deviceType !== "mobile" ? true : false}
+            // autoPlaySpeed={1000}
+            // keyBoardControl={true}
+            // renderButtonGroupOutside={true}
+            // customTransition="all .5"
+            transitionDuration={500}
+            containerClass=" h-full  "
+            sliderClass=""
+            partialVisbile={true}
+            // focusOnSelect={true}
+            // centerMode={true}
+            // // infinite={true}
+            // removeArrowOnDeviceType={["tablet", "mobile"]}
+            // deviceType={this.props.responsive}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-4-px h-full "
+          >
+            {props.images.map((data, index) => (
+              <img
+                key={index}
+                className=" w-full h-full  sm:w-2/4 rounded-sm content-stretch"
+                src={data}
+                alt=""
+              />
+            ))}
+          </Carousel>
+        </div>
 
         <div className="w-full sm:w-2/4 p-5 space-y-4 sm:space-y-10">
           <h2 className="text-center font-mono font-bold text-lg">
