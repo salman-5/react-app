@@ -21,7 +21,6 @@ export default function Welcome() {
 
   return (
     <>
-      <ScrollToTop />
       <div ref={front} className="items-center justify-items-center ">
         <Front />
       </div>

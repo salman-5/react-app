@@ -104,14 +104,14 @@ export default function Form(params) {
       <form
         onSubmit={sendMail}
         action="#"
-        class="flex flex-col p-8 space-y-5 bg-slate-500 rounded-[30px] justify-between place-items-center content-between place-content-between w-full"
+        className="flex flex-col p-8 space-y-5 bg-slate-500 rounded-[30px] justify-between place-items-center content-between place-content-between w-full"
       >
         <div className="w-full gap-5 ">
           <div className="flex flex-col gap-3">
             <div>
               <label
-                for="name"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                htmlFor="name"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 Name
               </label>
@@ -120,15 +120,15 @@ export default function Form(params) {
                 type="text"
                 id="name"
                 name="name"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder="Name"
                 required
               />
             </div>
             <div>
               <label
-                for="email"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                htmlFor="email"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 Your email
               </label>
@@ -137,23 +137,22 @@ export default function Form(params) {
                 type="email"
                 id="email"
                 name="email"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder="email"
                 required
               />
             </div>
             <div>
               <label
-                for="Mobile Number"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                htmlFor="Mobile Number"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 Mobile Number
               </label>
-              {/* <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required /> */}
+              {/* <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required /> */}
 
               <div className="flex flex-col bg-gray-700 p-2 rounded-lg">
                 <PhoneInputWithCountrySelect
-                  containerClass=""
                   international
                   defaultCountry="AE"
                   onChange={(e) => changeHandler(e, "mobile")}
@@ -173,8 +172,8 @@ export default function Form(params) {
             </div>
             <div>
               <label
-                for="subject"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                htmlFor="subject"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 Subject
               </label>
@@ -183,7 +182,7 @@ export default function Form(params) {
                 onChange={changeHandler}
                 type="text"
                 id="subject"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder="Let us know how we can help you"
                 required
               />
@@ -191,7 +190,7 @@ export default function Form(params) {
             <div className="flex flex-col w-full space-y-3">
               <div className="">
                 <div>
-                  <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                     Project Status
                   </label>
                   <div
@@ -224,7 +223,7 @@ export default function Form(params) {
 
               {/* <div className="">
                 <div>
-                  <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                     Interested Products
                   </label>
                   <div className="flex space-x-5">
@@ -265,7 +264,7 @@ export default function Form(params) {
               </div> */}
 
               <div className="flex flex-col items-start justify-center w-full space-y-3">
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                   Interested Products
                 </label>
                 <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 space-x-0 items-center w-full justify-center lg:space-x-3">
@@ -283,8 +282,7 @@ export default function Form(params) {
                         },
                         searchBox: {
                           border: "none",
-                          "border-bottom": "1px solid green",
-                          "border-radius": "8px",
+                          borderBottom: "1px solid gray",
                           color: "red !important",
                           background: "rgb(55 65 81)",
                         },
@@ -328,8 +326,7 @@ export default function Form(params) {
                         },
                         searchBox: {
                           border: "none",
-                          "border-bottom": "1px solid green",
-                          "border-radius": "8px",
+                          borderBottom: "1px solid gray",
                           color: "red !important",
                           background: "rgb(55 65 81)",
                         },
@@ -374,8 +371,7 @@ export default function Form(params) {
                         },
                         searchBox: {
                           border: "none",
-                          "border-bottom": "1px solid green",
-                          "border-radius": "8px",
+                          borderBottom: "1px solid gray",
                           color: "red !important",
                           background: "rgb(55 65 81)",
                         },
@@ -422,8 +418,7 @@ export default function Form(params) {
                         },
                         searchBox: {
                           border: "none",
-                          "border-bottom": "1px solid green",
-                          "border-radius": "8px",
+                          borderBottom: "1px solid gray",
                           color: "red !important",
                           background: "rgb(55 65 81)",
                         },
@@ -455,10 +450,10 @@ export default function Form(params) {
                 </div>
               </div>
 
-              <div class="h-full">
+              <div className="h-full">
                 <label
-                  for="message"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                  htmlFor="message"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
                 >
                   Your message
                 </label>
@@ -467,7 +462,7 @@ export default function Form(params) {
                   id="message"
                   name="message"
                   rows="6"
-                  class="block p-2.5 w-full h-5/6 text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  className="block p-2.5 w-full h-5/6 text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Leave a comment..."
                 ></textarea>
               </div>
@@ -486,7 +481,7 @@ export default function Form(params) {
           <button
             type="submit"
             value="Send message"
-            class="mx-auto rounded-full bg-blue-500 text-white  justify-center py-3 px-5 text-sm font-medium text-center  bg-primary-700 sm:w-full hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            className="mx-auto rounded-full bg-blue-500 text-white  justify-center py-3 px-5 text-sm font-medium text-center  bg-primary-700 sm:w-full hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >
             Submit
           </button>

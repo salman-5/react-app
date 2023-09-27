@@ -1,45 +1,36 @@
-import React, { useEffect, useState , useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { images, btns } from "../Data";
 
-
-let useClickOutside =(handler) =>{
-  let domNode= useRef();
-  useEffect(()=>{
-    let clicked = (event) =>{
-
-      if(event.target.id==="popup"){
-      if(!domNode.current.contains(event.target)){
-        handler();
+let useClickOutside = (handler) => {
+  let domNode = useRef();
+  useEffect(() => {
+    let clicked = (event) => {
+      if (event.target.id === "popup") {
+        if (!domNode.current.contains(event.target)) {
+          handler();
+        }
       }
-    }
     };
-      document.addEventListener("mousedown", clicked);
-      return ()=>{
-        document.removeEventListener("mousedown", clicked);
-      };
-    }
-    );
-      return domNode;
+    document.addEventListener("mousedown", clicked);
+    return () => {
+      document.removeEventListener("mousedown", clicked);
+    };
+  });
+  return domNode;
 };
-  
-function Filter ()  {
 
+function Filter() {
   const [filterImages, setFilterImages] = useState(null);
   const [active, setActive] = useState(false);
-  const [click ,setClick] = useState(false);
+  const [click, setClick] = useState(false);
   const default1 = images.filter((item) => item.category === "bifold");
 
   useEffect(() => {
     setFilterImages(default1);
   }, []);
-  let domNode=
-    useClickOutside(()=>{
-      setClick(false);
-    });
-  
-  
- 
-    
+  let domNode = useClickOutside(() => {
+    setClick(false);
+  });
 
   const handleClick = (e) => {
     const btnValue = e.target.value;
@@ -52,10 +43,9 @@ function Filter ()  {
     }
   };
 
-  const fullScreen = (e) =>{
-        setClick(e.target.src)
-      console.log(e.target.src);
-
+  const fullScreen = (e) => {
+    setClick(e.target.src);
+    console.log(e.target.src);
   };
 
   return (
@@ -75,8 +65,10 @@ function Filter ()  {
               key={id}
               value={value}
               className={`${
-                active === value ? "bg-indigo-500 text-white" : " bg-gray-200 text-black "
-              } py-3 px-5 inline-block rounded-full border-[3px] transition-all duration-300 hover:bg-gray-400 border-cyan-100 border-solid border-fourth text-sm  md:text-lg font-semibold `}
+                active === value
+                  ? "bg-indigo-500 text-white"
+                  : " bg-gray-200 text-black "
+              } py-3 px-5 rounded-full border-[3px] transition-all duration-300 hover:bg-gray-400 border-cyan-100 border-solid border-fourth text-sm  md:text-lg font-semibold flex items-center justify-center `}
             >
               {name}
             </button>
@@ -104,19 +96,23 @@ function Filter ()  {
             );
           })}
       </div>
-          {click &&
-      <div  id="popup" className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50" >
-
-           <div ref={domNode} className="absolute h-1/2   aspect-square lg:w-1/2 lg:h-2/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden border-4 border-solid border-green rounded-md group" >
-
-           <img
-        className=" w-full h-full items-center justify-items-center object-fill group-hover:scale-110 transition-all duration-500 rounded-md"
-        src={click}
-        alt="demo-img"
-        />
+      {click && (
+        <div
+          id="popup"
+          className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50"
+        >
+          <div
+            ref={domNode}
+            className="absolute h-1/2   aspect-square lg:w-1/2 lg:h-2/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden border-4 border-solid border-green rounded-md group"
+          >
+            <img
+              className=" w-full h-full items-center justify-items-center object-fill group-hover:scale-110 transition-all duration-500 rounded-md"
+              src={click}
+              alt="demo-img"
+            />
+          </div>
         </div>
-      </div>
-      }
+      )}
     </div>
   );
 }
