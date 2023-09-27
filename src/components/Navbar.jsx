@@ -54,7 +54,7 @@ function Navbar() {
             mobmenu ? "bg-indigo-500 text-white" : "text-black "
           } flex items-center justify-between lg:flex-row flex-col  bg-white`}
         >
-          <MenuElement func={scrollToSection} s={front} name="Home" />
+          <MenuElement func={navigate} s={front} name="Home" />
           <MenuElement func={scrollToSection} s={about} name="About" />
           <MenuElement func={scrollToSection} s={services} name="Services" />
           <MenuElement func={scrollToSection} s={gallery} name="Gallery" />

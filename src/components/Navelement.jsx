@@ -1,12 +1,13 @@
 import ScrollToTop from "./ScrollToTop";
-export default function MenuElement(props) {
+import { HashLink } from "react-router-hash-link";
+export default function MenuElement({ func, name }) {
   return (
-    <a
-      href={`#${props.name.toLowerCase()}`}
-      onClick={() => props.func(props.s)}
+    <HashLink
+      // href={`#${props.name.toLowerCase()}`}
+      to={`/#${name.toLowerCase()}`}
       className="font-bold text-xl text-[#444444] p-4 font-Open-sans cursor-pointer "
     >
-      {props.name}
-    </a>
+      {name}
+    </HashLink>
   );
 }
