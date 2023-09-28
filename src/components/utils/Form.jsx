@@ -42,32 +42,39 @@ export default function Form(params) {
     const myTimeout = setTimeout(() => {
       setClick(false);
     }, 3000);
-
-    // emailjs.sendForm('service_d0rkt5s', 'template_knnhnu8', e.target, 'xtLjEqpIlCPEMmn25')
-    // .then((result) => {
-    //  alert("Send mail")
-    // }, (error) => {
-    //     console.log(error.text);
-    // });
+    console.log(formState);
+    emailjs.send('service_d0rkt5s', 'template_knnhnu8',formState, 'xtLjEqpIlCPEMmn25')
+    .then((result) => {
+     alert("Send mail")
+    }, (error) => {
+        console.log(error.text);
+    });
   };
   const changeHandler = (e, action = "form", type = "form") => {
+    let str = "";
+    if(Array.isArray(e)){
+
+      e.map((i)=>{
+        str+= i["key"]+", "
+      })
+    }
     if (action === "add") {
-      if (type === "door") setFormState({ ...formState, door: e });
-      if (type === "window") setFormState({ ...formState, window: e });
-      if (type === "facade") setFormState({ ...formState, facade: e });
-      if (type === "railing") setFormState({ ...formState, railing: e });
+      if (type === "door") setFormState({ ...formState, door: str });
+      if (type === "window") setFormState({ ...formState, window: str });
+      if (type === "facade") setFormState({ ...formState, facade: str });
+      if (type === "railing") setFormState({ ...formState, railing: str });
 
       return;
     }
     if (action === "mobile") {
-      setFormState({ ...formState, mobileNumber: e });
+      setFormState({ ...formState, mobileNumber: str });
       return;
     }
     if (action === "delete") {
-      if (type === "door") setFormState({ ...formState, door: e });
-      if (type === "window") setFormState({ ...formState, window: e });
-      if (type === "facade") setFormState({ ...formState, facade: e });
-      if (type === "railing") setFormState({ ...formState, railing: e });
+      if (type === "door") setFormState({ ...formState, door: str });
+      if (type === "window") setFormState({ ...formState, window: str });
+      if (type === "facade") setFormState({ ...formState, facade: str });
+      if (type === "railing") setFormState({ ...formState, railing: str });
       return;
     }
 
@@ -78,21 +85,21 @@ export default function Form(params) {
             ...formState,
             designing: true,
             tender: false,
-            excecution: false,
+            execution: false,
           });
         else if (e.target.id === "tender")
           setFormState({
             ...formState,
             designing: false,
             tender: true,
-            excecution: false,
+            execution: false,
           });
-        else if (e.target.id === "excecution")
+        else if (e.target.id === "execution")
           setFormState({
             ...formState,
             designing: false,
             tender: false,
-            excecution: true,
+            execution: true,
           });
       return;
     }
@@ -213,9 +220,9 @@ export default function Form(params) {
                       <input
                         type="radio"
                         name="project-status"
-                        id="excecution"
+                        id="execution"
                       />
-                      <label htmlFor="">Excecution</label>
+                      <label htmlFor="">Execution</label>
                     </div>
                   </div>
                 </div>
@@ -302,7 +309,7 @@ export default function Form(params) {
                         },
                         {
                           cat: "Group 1",
-                          key: "Slidind Door",
+                          key: "Sliding Door",
                         },
                         {
                           cat: "Group 1",
@@ -314,6 +321,7 @@ export default function Form(params) {
 
                   <div className=" flex-1 flex-col sm:flex-row w-full">
                     <Multiselect
+                      name="window"
                       displayValue="key"
                       placeholder="Windows"
                       showArrow
