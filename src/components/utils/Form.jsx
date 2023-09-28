@@ -67,7 +67,8 @@ export default function Form(params) {
       return;
     }
     if (action === "mobile") {
-      setFormState({ ...formState, mobileNumber: str });
+      console.log(e);
+      setFormState({ ...formState, mobileNumber: e });
       return;
     }
     if (action === "delete") {
