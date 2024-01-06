@@ -79,28 +79,32 @@ export default function PageCard(props) {
             {props.title}
           </h2>
           <div className="">
-            <ul className="p-2 flex gap-2 justify-evenly">
+            <ul className="flex justify-evenly">
               <li
-                className="flex items-center justify-center rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200"
+                className={`flex w-full items-center justify-center rounded-t-2xl  px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-300 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200  ${
+                  active === "possibilities" ? "bg-slate-500" : ""
+                }`}
                 onClick={handleClick}
               >
                 POSSIBILITY
               </li>
               <li
-                className="flex items-center justify-center rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200"
+                className={`flex w-full items-center justify-center rounded-t-2xl px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-300 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200 ${
+                  active === "performance" ? "bg-slate-500" : ""
+                } `}
                 onClick={handleClick}
               >
                 PERFORMANCE Data
               </li>
             </ul>
+            <ul className="bg-slate-500 p-4">
+              {keys.map((key, index) => (
+                <li key={index}>
+                  {key}: {props.technical[active][0][key]}
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul>
-            {keys.map((key, index) => (
-              <li key={index}>
-                {key}: {props.technical[active][0][key]}
-              </li>
-            ))}
-          </ul>
 
           <p>{props.description}</p>
         </div>
