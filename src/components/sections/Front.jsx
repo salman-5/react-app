@@ -13,7 +13,7 @@ export default function Front() {
         <HashLink
           to="#contact"
           smooth
-          className="hover:bg-orange-400 hover:text-white mx-auto px-2 py-1 text-center font-light text-white rounded-full border-orange-400 border-2 bg-transparent transition duration-150 ease-in scroll-smooth"
+          className="hover:bg-orange-400 hover:text-white mx-auto px-4 py-3 text-2xl text-center  text-white rounded-full border-orange-400 border-2 bg-transparent transition duration-150 ease-in scroll-smooth"
         >
           Get A Quote{" "}
         </HashLink>

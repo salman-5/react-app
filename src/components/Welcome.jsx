@@ -26,6 +26,7 @@ export default function Welcome() {
       </div>
       <div
         ref={product}
+        id="products"
         className="items-center bg-gray-300 justify-items-center "
       >
         <h1 className="  pt-10 underline underline-offset-8 decoration-amber-400 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-black">

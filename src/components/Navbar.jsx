@@ -66,17 +66,17 @@ function Navbar() {
             <MenuElement
               mobMenu={mobmenu}
               setMobMenu={setMobmenu}
-              name="Product"
+              name="Products"
             />
             <HashLink
               to="/#contact"
               onClick={() => {
                 setMobmenu(!mobmenu);
               }}
-              className="text-2xl text-white font-bold px-10 py-5 rounded-full uppercase mx-auto bg-[#444444]"
+              className=" text-lg text-white font-bold px-5 py-2 rounded-full mx-auto bg-[#444444]"
               text=""
             >
-              Get Started
+              Contact Us
             </HashLink>
           </div>
         </div>
@@ -88,20 +88,20 @@ function Navbar() {
             } flex items-center justify-between lg:flex-row flex-col  bg-white`}
           >
             <MenuElement name="Home" />
-            <MenuElement name="About" />
+            <MenuElement name="Products" />
             <MenuElement name="Services" />
             <MenuElement name="Gallery" />
-            <MenuElement name="Contact" />
-            <MenuElement name="Product" />
+            <MenuElement name="About" />
+            {/* <MenuElement name="Contact" /> */}
             <HashLink
               to="/#contact"
               onClick={() => {
                 setMobmenu(!mobmenu);
               }}
-              className="text-2xl text-white font-bold px-10 py-5 rounded-full uppercase mx-auto bg-[#444444]"
+              className="text-xl text-white font-bold px-5 py-2 rounded-full  mx-auto bg-[#444444]"
               text=""
             >
-              Get Started
+              Contact Us
             </HashLink>
           </div>
         </div>
