@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import { images, btns } from "../Data";
-import ImageGallery from "react-image-gallery";
 
 
 let useClickOutside = (handler) => {
