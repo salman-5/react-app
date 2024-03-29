@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { images, btns } from "../Data";
 
+
 let useClickOutside = (handler) => {
   let domNode = useRef();
   useEffect(() => {
@@ -51,7 +52,7 @@ function Filter() {
   return (
     <div className="wrapper p-8">
       {/* heading */}
-      <h1 className="mt-10 underline underline-offset-8 decoration-cyan-800 uppercase font-Raleway text-5xl text-[#444444] text-center font-bold text-primary mb-10">
+      <h1 className="mt-10 htext underline underline-offset-8 decoration-cyan-800 uppercase  text-5xl  text-center font-bold text-primary mb-10">
         Gallery
       </h1>
 
@@ -64,11 +65,10 @@ function Filter() {
               onClick={handleClick}
               key={id}
               value={value}
-              className={`${
-                active === value
+              className={`${active === value
                   ? "bg-indigo-500 text-white"
                   : " bg-gray-200 text-black "
-              } py-3 px-5 rounded-full border-[3px] transition-all duration-300 hover:bg-gray-400 border-cyan-100 border-solid border-fourth text-sm  md:text-lg font-semibold flex items-center justify-center `}
+                } py-3 px-5 rounded-full border-[3px] transition-all duration-300 hover:bg-gray-400 border-cyan-100 border-solid border-fourth text-sm  md:text-lg font-semibold flex items-center justify-center `}
             >
               {name}
             </button>
@@ -78,23 +78,27 @@ function Filter() {
 
       {/* images */}
       <div className="grid md:grid-cols-3 gap-5">
-        {filterImages &&
-          filterImages.map((item, id) => {
-            const { img } = item;
-            return (
-              <div
-                className="overflow-hidden border-2 border-solid  rounded-md group"
-                key={id}
-              >
-                <img
-                  className="w-full h-full object-fit group-hover:scale-110 transition-all duration-500 rounded-md"
-                  src={img}
-                  alt="demo-img"
-                  onClick={fullScreen}
-                />
-              </div>
-            );
-          })}
+      {/* <div>
+        {/* <ImageGallery items={filterImages} showThumbnails={false}/> */}
+      {/* </div> */}
+
+      {filterImages &&
+        filterImages.map((item, id) => {
+          const { original } = item;
+          return (
+            <div
+              className="overflow-hidden border-2 border-solid  rounded-md group"
+              key={id}
+            >
+              <img
+                className="w-full h-full object-fit group-hover:scale-110 transition-all duration-500 rounded-md"
+                src={original}
+                alt="demo-img"
+                onClick={fullScreen}
+              />
+            </div>
+          );
+        })}
       </div>
       {click && (
         <div

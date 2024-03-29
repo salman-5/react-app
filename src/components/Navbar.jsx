@@ -16,7 +16,7 @@ function Navbar() {
     <div
       className={`content-center place-items-center  top-0 left-0  opacity-90 py-5 px-4 justify-between  mx-0 flex ${
         mobmenu ? "flex-col lg:flex-row" : "flex-row"
-      }  bg-white`}
+      }   bg-[#D2CBCA] `}
     >
       <div className="flex items-center justify-center space-x-3 px-2">
         <img
@@ -36,7 +36,7 @@ function Navbar() {
       {mobmenu ? (
         <div className={``}>
           <div
-            className={`flex items-center justify-between lg:flex-row flex-col  bg-white`}
+            className={`flex items-center justify-between lg:flex-row flex-col  bg-[#D2CBCA] bg-opacity-40`}
           >
             <MenuElement
               mobMenu={mobmenu}
@@ -85,7 +85,7 @@ function Navbar() {
           <div
             className={`${
               mobmenu ? "bg-indigo-500 text-white" : "text-black "
-            } flex items-center justify-between lg:flex-row flex-col  bg-white`}
+            } flex items-center justify-between lg:flex-row flex-col   bg-[#D2CBCA] bg-opacity-40`}
           >
             <MenuElement name="Home" />
             <MenuElement name="Products" />

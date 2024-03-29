@@ -28,7 +28,7 @@ export default function App() {
         <AutoScrollToTop />
         <Navbar />
 
-        <div className="p-5  overflow-hidden bg-transparent">
+        <div className=" overflow-hidden bg-bg-gray">
           <Routes>
             <Route path="/" Component={Welcome} />
             <Route path="/bifold" Component={Bifold_page} />

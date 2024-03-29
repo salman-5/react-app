@@ -1,6 +1,19 @@
+@config "../tailwind.config.js";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .htext {
+    @apply text-head-text uppercase font-bold
+
+    /* ... */
+  }
+  .ptext {
+    @apply font-open-sans text-black
+
+  }
+}
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
