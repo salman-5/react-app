@@ -8,10 +8,10 @@ import ContactCard from "../utils/contact-card";
 export default function Contact() {
   return (
     <div className="w-full">
-      <h2 className="pt-10 underline underline-offset-8 decoration-amber-400 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-black">
+      <h2 className="pt-10  htext underline underline-offset-8 decoration-[#200A0A] decoration-opacity-50 mb-4 text-4xl tracking-tight font-extrabold text-center">
         Contact Us
       </h2>
-      <p className="px-8 lg:mb-16 font-light text-center text-gray-900 dark:text-white sm:text-xl">
+      <p className="px-8 lg:mb-16 font-light text-center text-black sm:text-xl">
         Got a technical issue? Need details about our Business plan? Let us
         know.
       </p>

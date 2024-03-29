@@ -43,7 +43,10 @@ export default function Products() {
   ];
   return (
     <>
-      <div className=" bg-gray-300">
+     <h1 className=" text-head-text pt-10 underline bg-bg-gray underline-offset-8 decoration-[#200A0A] decoration-opacity-50  text-4xl tracking-tight font-extrabold text-center  ">
+          Our Products
+        </h1>
+      <div className=" bg-bg-gray">
         {/* <h1 className=" mt-10 underline underline-offset-8 decoration-amber-400 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-black">Our Products</h1> */}
         <div className="  grid grid-flow-col spacing-x-4 gap-4 ">
           {/* <div className=" bg-slate-400 flex spacing-x-4 gap-4 "> */}
