@@ -86,34 +86,7 @@ export default function About(props) {
                     <About_card icon={abouticon_2} title="SPECIALITY" content="Design, innovation and quality are a common denominator in our Bi-fold Doors. They are adjustable to any type of project: single-family and collective housing, health, industrial, offices..., any type of building!" /> */}
         </div>
       </div>
-      <div className="grid lg:grid-cols-2 grid-cols-1 bg-white items-center">
-        <Door left={leftpanel} right={rightpanel} in_bool={in_bool} />
-        <div className="relative co">
-          <h1 className="mt-5 px-8 font-bold text-4xl flex font-Raleway text-slate-800">
-            Configure Your Product
-          </h1>
-          <QuoteForm
-            className="absolute left-0"
-            getimage={getImageData}
-            getOpening={getOpening}
-          />
-          {/* <img src={imageData.default} className='absolute right-0'/> */}
-        </div>
-
-        {/* <div className="flex flex-col h-full items-content-center m-5 mt-10">
-                
-                <h1 className="mt-5 px-8 font-bold text-4xl flex font-Raleway text-slate-800">Demo</h1>
-                    {/* <About_card icon={abouticon_1} title="EMITAL Bi-Fold Doors" content="EMITAL Bi-Fold Doors powered by CORTIZO has designed more than 50 exclusive systems of windows, facades, composite panel, solar protection systems and balustrade. This commitment to innovation allows us to offer high value added products, maximizing energy efficiency, thermal and acoustic insulation and resistance to atmospheric agents." />
-                    <About_card icon={abouticon_2} title="SPECIALITY" content="Design, innovation and quality are a common denominator in our Bi-fold Doors. They are adjustable to any type of project: single-family and collective housing, health, industrial, offices..., any type of building!" /> *
-                    <img
-                    ref={imageElement}
-                    src={imageData.default} 
-                    alt="Schema Image" 
-                    className={'max-w-md'}
-                    // onLoad={() => setImageDimensions({...imageDimensions,['height']: imageElement.current.naturalHeight,['width']: imageElement.current.naturalWidth,})} 
-                    /> 
-                </div>  */}
-      </div>
+      
     </>
   );
 }

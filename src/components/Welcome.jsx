@@ -9,10 +9,11 @@ import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import Bifold from "./sections/Bifold";
 import Products from "./sections/Products";
-
+import ProductWidget from "./sections/Product-widget";
 export default function Welcome() {
   const front = useRef(null);
   const product = useRef(null);
+  const productW = useRef(null);
 
   const about = useRef(null);
   const services = useRef(null);
@@ -24,6 +25,9 @@ export default function Welcome() {
       <div ref={front} className="items-center bg-bg-gray justify-items-center ">
         <Front />
       </div>
+      <div ref={productW} className="items-center bg-gray-300 justify-items-center ">
+        <ProductWidget />
+      </div>
       <div
         ref={product}
         id="products"
@@ -33,9 +37,6 @@ export default function Welcome() {
 
         <Products />
       </div>
-      {/* <div ref={front} className="items-center justify-items-center ">
-        <Bifold />
-      </div> */}
       <div ref={about} id="about" className="items-center justify-items-center">
         <About />
       </div>

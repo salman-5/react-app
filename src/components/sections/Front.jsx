@@ -3,7 +3,7 @@ import { HashLink } from "react-router-hash-link";
 export default function Front() {
   return (
     <>
-      <div className="flex h-screen flex-col space-y-4 py-6 justify-center bg-left bg-hero-pattern bg-cover bg-stone-700 bg-blend-overlay ">
+      <div className="flex h-screen w-screen flex-col space-y-4 py-6 justify-center bg-left bg-hero-pattern bg-cover bg-stone-700 bg-blend-overlay ">
         <h1 className="mx-auto text-5xl text-white font-bold font-Raleway ">
           Emital Doors
         </h1>
