@@ -1,21 +1,7 @@
-import {
-  Radio,
-  Card,
-  List,
-  ListItem,
-  ListItemPrefix,
-  Typography,
-} from "@material-tailwind/react";
-import Input, {
-  getCountries,
-  getCountryCallingCode,
-} from "react-phone-number-input/input";
-import Multiselect from "multiselect-react-dropdown";
-import en from "react-phone-number-input/locale/en.json";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Multiselect } from "multiselect-react-dropdown";
 import { FaThumbsUp } from "react-icons/fa";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
-import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import emailjs from "@emailjs/browser";
 
@@ -43,7 +29,7 @@ export default function Form(params) {
       setClick(false);
     }, 3000);
     console.log(formState);
-    emailjs.send('service_ajzldoe', 'template_knnhnu8',formState, 'luuXvMlaYI5zTWeMr')
+    emailjs.send('service_ajzldoe', 'template_knnhnu8',formState, '9uBY3D_zDUUEtpSIO')
     .then((result) => {
      alert("Send mail")
     }, (error) => {
@@ -211,11 +197,15 @@ export default function Form(params) {
                         name="project-status"
                         id="designing"
                       />
-                      <label htmlFor="">Designing</label>
+                      <label htmlFor="" className="text-sm font-medium text-gray-900 dark:text-gray-300">
+                        Designing
+                      </label>
                     </div>
                     <div className="px-2 space-x-2">
                       <input type="radio" name="project-status" id="tender" />
-                      <label htmlFor="">Tender</label>
+                      <label htmlFor="" className="text-sm font-medium text-gray-900 dark:text-gray-300">
+                        Tender
+                      </label>
                     </div>
                     <div className="px-2 space-x-2">
                       <input
@@ -223,7 +213,9 @@ export default function Form(params) {
                         name="project-status"
                         id="execution"
                       />
-                      <label htmlFor="">Execution</label>
+                      <label htmlFor="" className="text-sm font-medium text-gray-900 dark:text-gray-300">
+                        Execution
+                      </label>
                     </div>
                   </div>
                 </div>
