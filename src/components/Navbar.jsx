@@ -58,11 +58,11 @@ function Navbar() {
               setMobMenu={setMobmenu}
               name="Gallery"
             />
-            <MenuElement
+            {/* <MenuElement
               mobMenu={mobmenu}
               setMobMenu={setMobmenu}
               name="Contact"
-            />
+            /> */}
             <MenuElement
               mobMenu={mobmenu}
               setMobMenu={setMobmenu}

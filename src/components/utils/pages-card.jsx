@@ -1,14 +1,13 @@
-import { requirePropFactory } from "@mui/material";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const CarouselComponent = Carousel.default ?? Carousel;
 
 export default function PageCard(props) {
   const [active, setActive] = useState("performance");
-  function handleClick(t) {
-    console.log(t.target.outerText);
-    if (t.target.outerText === "PERFORMANCE DATA") {
-      setActive("performance");
-    } else setActive("possibilities");
+  function handleClick(section) {
+    setActive(section);
   }
   // Object.keys(props.technical[active][0]).forEach(element => {
   //     console.log(element);
@@ -36,10 +35,10 @@ export default function PageCard(props) {
   };
 
   return (
-    <div className=" p-3 shadow-lg rounded-sm h-full ">
-      <div className="flex flex-col sm:flex-row w-full justify-start h-full  space-x-3 ">
-        <div className=" w-full sm:w-1/3 min-h-full ">
-          <Carousel
+    <div className="rounded-2xl bg-white p-4 shadow-lg shadow-slate-200/70 ring-1 ring-slate-200 sm:p-6">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
+        <div className="min-w-0">
+          <CarouselComponent
             swipeable={true}
             draggable={true}
             showDots={true}
@@ -52,57 +51,87 @@ export default function PageCard(props) {
             // renderButtonGroupOutside={true}
             // customTransition="all .5"
             transitionDuration={500}
-            containerClass=" h-full  "
-            sliderClass=""
-            partialVisbile={true}
+            containerClass="w-full"
+            sliderClass="h-full"
+            partialVisible={true}
             // focusOnSelect={true}
             // centerMode={true}
             // // infinite={true}
             // removeArrowOnDeviceType={["tablet", "mobile"]}
             // deviceType={this.props.responsive}
             dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-4-px h-full "
+            itemClass="h-full px-1"
           >
             {props.images.map((data, index) => (
-              <img
+              <div
                 key={index}
-                className=" object-cover  sm:w-2/4 rounded-sm place-content-stretch"
-                src={data}
-                alt=""
-              />
+                className="aspect-4/3 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+              >
+                <img
+                  className="block h-full w-full object-contain p-2 sm:p-3"
+                  src={data}
+                  alt=""
+                />
+              </div>
             ))}
-          </Carousel>
+          </CarouselComponent>
         </div>
 
-        <div className="w-full sm:w-2/4 p-5 space-y-4 sm:space-y-10">
-          <h2 className="text-center font-mono font-bold text-lg">
+        <div className="min-w-0 space-y-5">
+          <h2 className="text-center text-lg font-bold tracking-wide text-slate-900 sm:text-left">
             {props.title}
           </h2>
           <div className="">
-            <ul className="p-2 flex gap-2 justify-evenly">
-              <li
-                className="flex items-center justify-center rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200"
-                onClick={handleClick}
-              >
-                POSSIBILITY
+            <ul className="flex flex-wrap justify-center gap-3 p-2 sm:justify-start">
+              <li>
+                <button
+                  type="button"
+                  aria-pressed={active === "possibilities"}
+                  className={`flex cursor-pointer items-center justify-center rounded-full border px-5 py-2 text-xs font-semibold uppercase leading-normal tracking-wide transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 active:scale-95 ${
+                    active === "possibilities"
+                      ? "border-slate-900 bg-slate-900 text-white shadow-lg shadow-slate-400/40"
+                      : "border-slate-300 bg-white text-slate-700 hover:border-slate-500 hover:bg-slate-100 hover:text-slate-900"
+                  }`}
+                  onClick={() => handleClick("possibilities")}
+                >
+                  POSSIBILITY
+                </button>
               </li>
-              <li
-                className="flex items-center justify-center rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover: bg-slate-300 focus:bg-slate-100 focus:outline-none focus:ring-0 active:bg-slate-200"
-                onClick={handleClick}
-              >
-                PERFORMANCE Data
+              <li>
+                <button
+                  type="button"
+                  aria-pressed={active === "performance"}
+                  className={`flex cursor-pointer items-center justify-center rounded-full border px-5 py-2 text-xs font-semibold uppercase leading-normal tracking-wide transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 active:scale-95 ${
+                    active === "performance"
+                      ? "border-slate-900 bg-slate-900 text-white shadow-lg shadow-slate-400/40"
+                      : "border-slate-300 bg-white text-slate-700 hover:border-slate-500 hover:bg-slate-100 hover:text-slate-900"
+                  }`}
+                  onClick={() => handleClick("performance")}
+                >
+                  PERFORMANCE Data
+                </button>
               </li>
             </ul>
           </div>
-          <ul>
-            {keys.map((key, index) => (
-              <li key={index}>
-                {key}: {props.technical[active][0][key]}
-              </li>
-            ))}
-          </ul>
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm sm:p-5">
+            <ul className="space-y-1">
+              {keys.map((key, index) => (
+                <li
+                  key={index}
+                  className="rounded-xl border border-slate-200 bg-white px-2 py-2 text-sm text-slate-700 shadow-sm"
+                >
+                  <span className="block text-xs font-semibold uppercase tracking-wide text-slate-500">
+                    {key}
+                  </span>
+                  <span className="mt-1 block text-base font-medium text-slate-900">
+                    {props.technical[active][0][key]}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <p>{props.description}</p>
+          <p className="text-sm leading-6 text-slate-600">{props.description}</p>
         </div>
       </div>
     </div>

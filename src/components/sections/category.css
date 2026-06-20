@@ -1,5 +1,36 @@
-.category{
-    text-orientation: upright;
-    writing-mode: vertical-rl;
+.category {
+  text-orientation: upright;
+  writing-mode: vertical-rl;
 }
-    
+
+.carousel-container {
+  width: 100%;
+  max-height: 650px;
+  padding: 0 !important;
+  margin: 0 auto;
+}
+
+.carousel-item-padding-4-px {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+}
+
+.custom-dot-list-style {
+  display: flex !important;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 0;
+}
+
+.custom-dot-list-style li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.react-multi-carousel-list {
+  display: flex;
+  align-items: center;
+}

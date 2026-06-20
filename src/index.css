@@ -1,16 +1,12 @@
+@import "tailwindcss";
 @config "../tailwind.config.js";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @layer components {
   .htext {
-    @apply text-head-text uppercase font-bold
-
-    /* ... */
+    @apply text-head-text uppercase font-bold;
   }
   .ptext {
-    @apply font-open-sans text-black
+    @apply font-open-sans text-black;
 
   }
 }

@@ -10,28 +10,29 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 export default function MultiActionAreaCard(props) {
   const navigate = useNavigate();
   return (
-    <Card class="h-[550px] justify-between 2xl:justify-end items-start flex flex-col backdrop-blur-sm shadow-2xl overflow-hidden ">
+    <Card className="h-[550px] justify-between 2xl:justify-end items-start flex flex-col backdrop-blur-sm shadow-2xl overflow-hidden ">
       <CardActionArea>
         <CardMedia
           component="img"
-          height="100"
+          height="256"
           image={props.image}
+          loading="lazy"
+          className="object-cover w-full"
           alt="green iguana"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h5" component="div" className="line-clamp-2">
             {props.title}
           </Typography>
           <Typography
             variant="body2"
             color="text.secondary"
-            className="line-clamp-5"
+            className="line-clamp-5 whitespace-pre-line"
           >
             {props.descriptions}
           </Typography>
         </CardContent>
-      </CardActionArea>
-      <CardActions>
+      <CardActions className="px-4 pb-4 pt-0 relative z-10">
         <Button
           size="small"
           color="primary"
@@ -43,6 +44,7 @@ export default function MultiActionAreaCard(props) {
           Learn More
         </Button>
       </CardActions>
+      </CardActionArea>
     </Card>
   );
 }

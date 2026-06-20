@@ -92,7 +92,7 @@ export default function QuoteForm(props) {
           <div className="flex flex-col gap-3">
             <div className="">
               <label
-                for="subject"
+                htmlFor="subject"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 Opening{" "}
@@ -114,7 +114,7 @@ export default function QuoteForm(props) {
                   />
                   <label
                     className="block mb-2 text-sm font-light text-gray-900 dark:text-gray-300"
-                    for="inlineRadio1"
+                    htmlFor="inlineRadio1"
                   >
                     In
                   </label>
@@ -134,7 +134,7 @@ export default function QuoteForm(props) {
                   />
                   <label
                     className="block mb-2 text-sm font-light text-gray-900 dark:text-gray-300"
-                    for="inlineRadio2"
+                    htmlFor="inlineRadio2"
                   >
                     Out
                   </label>
@@ -143,7 +143,7 @@ export default function QuoteForm(props) {
             </div>
             <div>
               <label
-                for="name"
+                htmlFor="name"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 Total Height
@@ -158,7 +158,7 @@ export default function QuoteForm(props) {
                 placeholder="Enter Height"
               />
               {!validations.heightIsValid ? (
-                <p>The height value should be between 1900 and 3000</p>
+                <p className="text-red-500 text-sm">The height value should be between 1900 and 3000</p>
               ) : (
                 ""
               )}
@@ -177,7 +177,7 @@ export default function QuoteForm(props) {
                 required
               />
               {!validations.widthIsValid ? (
-                <p>
+                <p className="text-red-500 text-sm">
                   The width / number of door value should be between 600 and
                   1200
                 </p>
@@ -208,7 +208,7 @@ export default function QuoteForm(props) {
             </div>
             <div>
               <label
-                for="schema"
+                htmlFor="schema"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 Schema

@@ -1,15 +1,18 @@
-import { useState, useRef } from "react";
+import { lazy, Suspense, useRef } from "react";
 
 import Front from "./sections/Front";
-import About from "./sections/About";
-import Gallery from "./sections/Gallery";
-import Services from "./sections/Services";
-import ScrollToTop from "./ScrollToTop";
-import Contact from "./sections/Contact";
-import Footer from "./sections/Footer";
-import Bifold from "./sections/Bifold";
-import Products from "./sections/Products";
-import ProductWidget from "./sections/Product-widget";
+
+const About = lazy(() => import("./sections/About"));
+const Gallery = lazy(() => import("./sections/Gallery"));
+const Services = lazy(() => import("./sections/Services"));
+const Contact = lazy(() => import("./sections/Contact"));
+const Products = lazy(() => import("./sections/Products"));
+const ProductWidget = lazy(() => import("./sections/Product-widget"));
+
+function SectionFallback() {
+  return <div className="min-h-[20vh] bg-bg-gray" aria-hidden="true" />;
+}
+
 export default function Welcome() {
   const front = useRef(null);
   const product = useRef(null);
@@ -25,42 +28,43 @@ export default function Welcome() {
       <div ref={front} className="items-center bg-bg-gray justify-items-center ">
         <Front />
       </div>
-      <div ref={productW} className="items-center bg-gray-300 justify-items-center ">
-        <ProductWidget />
-      </div>
-      <div
-        ref={product}
-        id="products"
-        className="items-center bg-gray-300 justify-items-center "
-      >
-       
+      <Suspense fallback={<SectionFallback />}>
+        <div ref={productW} className="items-center bg-gray-300 justify-items-center ">
+          <ProductWidget />
+        </div>
+        <div
+          ref={product}
+          id="products"
+          className="items-center bg-gray-300 justify-items-center "
+        >
 
-        <Products />
-      </div>
-      <div ref={about} id="about" className="items-center justify-items-center">
-        <About />
-      </div>
-      <div
-        ref={gallery}
-        className="items-center bg-bg-gray  justify-items-center"
-        id="gallery"
-      >
-        <Gallery />
-      </div>
-      <div
-        ref={services}
-        className="items-center  bg-slate-400 justify-items-center"
-        id="services"
-      >
-        <Services />
-      </div>
-      <div
-        ref={contact}
-        className="items-center bg-bg-gray justify-items-center w-full"
-        id="contact"
-      >
-        <Contact />
-      </div>
+          <Products />
+        </div>
+        <div ref={about} id="about" className="items-center justify-items-center">
+          <About />
+        </div>
+        <div
+          ref={gallery}
+          className="items-center bg-bg-gray  justify-items-center"
+          id="gallery"
+        >
+          <Gallery />
+        </div>
+        <div
+          ref={services}
+          className="items-center  bg-slate-400 justify-items-center"
+          id="services"
+        >
+          <Services />
+        </div>
+        <div
+          ref={contact}
+          className="items-center bg-bg-gray justify-items-center w-full"
+          id="contact"
+        >
+          <Contact />
+        </div>
+      </Suspense>
     </>
   );
 }
