@@ -24,9 +24,9 @@ export const bifold_data =
             }
         ],
         "images": [
-            "./asset/BF-3700-1.jpg",
-            "./asset/BF-3700-2.jpg",
-            "./asset/BF-3700-3.jpg"
+            "/asset/BF-3700-1.jpg",
+            "/asset/BF-3700-2.jpg",
+            "/asset/BF-3700-3.jpg"
         ]
     },
     {
@@ -53,9 +53,9 @@ export const bifold_data =
             }
         ],
         "images": [
-            "./asset/BF-80-1.jpg",
-            "./asset/BF-80-2.jpg",
-            "./asset/BF-80-3.jpg"
+            "/asset/BF-80-1.jpg",
+            "/asset/BF-80-2.jpg",
+            "/asset/BF-80-3.jpg"
         ]
     },
     {
@@ -81,8 +81,8 @@ export const bifold_data =
             }
         ],
         "images": [
-            "./asset/hi-bifold-1.jpg",
-            "./asset/hi-bifold-2.jpg"
+            "/asset/hi-bifold-1.jpg",
+            "/asset/hi-bifold-2.jpg"
         ]
     }
 ];
